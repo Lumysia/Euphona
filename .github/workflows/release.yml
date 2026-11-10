@@ -1,0 +1,56 @@
+name: Release
+
+# Pushing a tag vX.Y.Z publishes a GitHub release described by that version's CHANGELOG.md section
+# and uploads the iOS and macOS builds to App Store Connect (TestFlight; review is submitted there).
+# Tests are not rerun: the tag goes on a main commit whose CI has already passed.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_27.2.app/Contents/Developer
+
+jobs:
+  release:
+    runs-on: xcode-27
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+      - name: Release notes
+        run: tools/ci/release_notes.sh "$GITHUB_REF_NAME" > "$RUNNER_TEMP/notes.md"
+      - name: Build for iOS
+        run: tools/ci/build.sh "generic/platform=iOS"
+      - name: Build for macOS
+        run: tools/ci/build.sh "generic/platform=macOS"
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" --verify-tag --title "Euphona $GITHUB_REF_NAME" --notes-file "$RUNNER_TEMP/notes.md"
+
+  app-store:
+    name: App Store Connect (${{ matrix.platform }})
+    runs-on: xcode-27
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [iOS, macOS]
+    steps:
+      - uses: actions/checkout@v7
+      - name: API key
+        env:
+          ASC_KEY: ${{ secrets.APP_STORE_CONNECT_KEY }}
+        run: |
+          printf '%s' "$ASC_KEY" > "$RUNNER_TEMP/AuthKey.p8"
+          echo "ASC_KEY_PATH=$RUNNER_TEMP/AuthKey.p8" >> "$GITHUB_ENV"
+      - name: Archive and upload
+        env:
+          ASC_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+        run: tools/ci/upload.sh "${{ matrix.platform }}" "${{ github.run_number }}"
+      - name: Remove the key
+        if: always()
+        run: rm -f "$RUNNER_TEMP/AuthKey.p8"

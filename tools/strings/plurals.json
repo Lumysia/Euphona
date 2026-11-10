@@ -1,0 +1,310 @@
+{
+  "today_streak": {
+    "en": {
+      "one": "%lld-day streak",
+      "other": "%lld-day streak"
+    },
+    "zh-Hans": {
+      "other": "连续 %lld 天"
+    },
+    "zh-Hant": {
+      "other": "連續 %lld 天"
+    },
+    "ja": {
+      "other": "%lld日連続"
+    },
+    "ko": {
+      "other": "%lld일 연속"
+    },
+    "es": {
+      "one": "Racha de %lld día",
+      "many": "Racha de %lld de días",
+      "other": "Racha de %lld días"
+    },
+    "fr": {
+      "one": "Série de %lld jour",
+      "many": "Série de %lld de jours",
+      "other": "Série de %lld jours"
+    },
+    "de": {
+      "one": "%lld Tag in Folge",
+      "other": "%lld Tage in Folge"
+    },
+    "it": {
+      "one": "%lld giorno di fila",
+      "many": "%lld di giorni di fila",
+      "other": "%lld giorni di fila"
+    },
+    "pt": {
+      "one": "Sequência de %lld dia",
+      "many": "Sequência de %lld de dias",
+      "other": "Sequência de %lld dias"
+    },
+    "ru": {
+      "one": "%lld день подряд",
+      "few": "%lld дня подряд",
+      "many": "%lld дней подряд",
+      "other": "%lld дня подряд"
+    },
+    "uk": {
+      "one": "%lld день поспіль",
+      "few": "%lld дні поспіль",
+      "many": "%lld днів поспіль",
+      "other": "%lld дня поспіль"
+    },
+    "pl": {
+      "one": "%lld dzień z rzędu",
+      "few": "%lld dni z rzędu",
+      "many": "%lld dni z rzędu",
+      "other": "%lld dnia z rzędu"
+    },
+    "nl": {
+      "one": "%lld dag op rij",
+      "other": "%lld dagen op rij"
+    },
+    "sv": {
+      "one": "%lld dag i rad",
+      "other": "%lld dagar i rad"
+    },
+    "tr": {
+      "one": "%lld günlük seri",
+      "other": "%lld günlük seri"
+    },
+    "ar": {
+      "zero": "سلسلة من %lld يوم",
+      "one": "سلسلة من %lld يوم",
+      "two": "سلسلة من %lld يومين",
+      "few": "سلسلة من %lld أيام",
+      "many": "سلسلة من %lld يومًا",
+      "other": "سلسلة من %lld يوم"
+    },
+    "hi": {
+      "one": "लगातार %lld दिन",
+      "other": "लगातार %lld दिन"
+    },
+    "id": {
+      "other": "Beruntun %lld hari"
+    },
+    "ms": {
+      "other": "Berturut-turut %lld hari"
+    },
+    "vi": {
+      "other": "%lld ngày liên tiếp"
+    },
+    "th": {
+      "other": "ต่อเนื่อง %lld วัน"
+    },
+    "ca": {
+      "one": "Ratxa de %lld dia",
+      "many": "Ratxa de %lld de dies",
+      "other": "Ratxa de %lld dies"
+    },
+    "cs": {
+      "one": "%lld den v řadě",
+      "few": "%lld dny v řadě",
+      "many": "%lld dne v řadě",
+      "other": "%lld dní v řadě"
+    },
+    "da": {
+      "one": "%lld dag i træk",
+      "other": "%lld dage i træk"
+    },
+    "el": {
+      "one": "%lld συνεχόμενη ημέρα",
+      "other": "%lld συνεχόμενες ημέρες"
+    },
+    "fi": {
+      "one": "%lld päivän putki",
+      "other": "%lld päivän putki"
+    },
+    "he": {
+      "one": "רצף של %lld יום",
+      "two": "רצף של %lld ימים",
+      "other": "רצף של %lld ימים"
+    },
+    "hr": {
+      "one": "Niz: %lld dan",
+      "few": "Niz: %lld dana",
+      "other": "Niz: %lld dana"
+    },
+    "hu": {
+      "one": "%lld napos sorozat",
+      "other": "%lld napos sorozat"
+    },
+    "nb": {
+      "one": "%lld dag på rad",
+      "other": "%lld dager på rad"
+    },
+    "ro": {
+      "one": "Serie de %lld zi",
+      "few": "Serie de %lld zile",
+      "other": "Serie de %lld de zile"
+    },
+    "sk": {
+      "one": "Séria: %lld deň",
+      "few": "Séria: %lld dni",
+      "many": "Séria: %lld dňa",
+      "other": "Séria: %lld dní"
+    },
+    "sl": {
+      "one": "Niz: %lld dan",
+      "two": "Niz: %lld dneva",
+      "few": "Niz: %lld dni",
+      "other": "Niz: %lld dni"
+    }
+  },
+  "dashboard_assessment_count": {
+    "en": {
+      "one": "%lld analysis",
+      "other": "%lld analyses"
+    },
+    "zh-Hans": {
+      "other": "%lld 次分析"
+    },
+    "ja": {
+      "other": "%lld回の分析"
+    },
+    "ko": {
+      "other": "분석 %lld회"
+    },
+    "es": {
+      "one": "%lld análisis",
+      "many": "%lld de análisis",
+      "other": "%lld análisis"
+    },
+    "fr": {
+      "one": "%lld analyse",
+      "many": "%lld d’analyses",
+      "other": "%lld analyses"
+    },
+    "de": {
+      "one": "%lld Analyse",
+      "other": "%lld Analysen"
+    },
+    "it": {
+      "one": "%lld analisi",
+      "many": "%lld di analisi",
+      "other": "%lld analisi"
+    },
+    "pt": {
+      "one": "%lld análise",
+      "many": "%lld de análises",
+      "other": "%lld análises"
+    },
+    "ru": {
+      "one": "%lld анализ",
+      "few": "%lld анализа",
+      "many": "%lld анализов",
+      "other": "%lld анализа"
+    },
+    "uk": {
+      "one": "%lld аналіз",
+      "few": "%lld аналізи",
+      "many": "%lld аналізів",
+      "other": "%lld аналізу"
+    },
+    "pl": {
+      "one": "%lld analiza",
+      "few": "%lld analizy",
+      "many": "%lld analiz",
+      "other": "%lld analizy"
+    },
+    "nl": {
+      "one": "%lld analyse",
+      "other": "%lld analyses"
+    },
+    "sv": {
+      "one": "%lld analys",
+      "other": "%lld analyser"
+    },
+    "tr": {
+      "one": "%lld analiz",
+      "other": "%lld analiz"
+    },
+    "ar": {
+      "zero": "%lld تحليل",
+      "one": "%lld تحليل",
+      "two": "%lld تحليلان",
+      "few": "%lld تحليلات",
+      "many": "%lld تحليلًا",
+      "other": "%lld تحليل"
+    },
+    "hi": {
+      "one": "%lld विश्लेषण",
+      "other": "%lld विश्लेषण"
+    },
+    "id": {
+      "other": "%lld analisis"
+    },
+    "ms": {
+      "other": "%lld analisis"
+    },
+    "vi": {
+      "other": "%lld lần phân tích"
+    },
+    "th": {
+      "other": "วิเคราะห์ %lld ครั้ง"
+    },
+    "ca": {
+      "one": "%lld anàlisi",
+      "many": "%lld d’anàlisis",
+      "other": "%lld anàlisis"
+    },
+    "cs": {
+      "one": "%lld analýza",
+      "few": "%lld analýzy",
+      "many": "%lld analýzy",
+      "other": "%lld analýz"
+    },
+    "da": {
+      "one": "%lld analyse",
+      "other": "%lld analyser"
+    },
+    "el": {
+      "one": "%lld ανάλυση",
+      "other": "%lld αναλύσεις"
+    },
+    "fi": {
+      "one": "%lld analyysi",
+      "other": "%lld analyysia"
+    },
+    "he": {
+      "one": "%lld ניתוח",
+      "two": "%lld ניתוחים",
+      "other": "%lld ניתוחים"
+    },
+    "hr": {
+      "one": "%lld analiza",
+      "few": "%lld analize",
+      "other": "%lld analiza"
+    },
+    "hu": {
+      "one": "%lld elemzés",
+      "other": "%lld elemzés"
+    },
+    "nb": {
+      "one": "%lld analyse",
+      "other": "%lld analyser"
+    },
+    "ro": {
+      "one": "%lld analiză",
+      "few": "%lld analize",
+      "other": "%lld de analize"
+    },
+    "sk": {
+      "one": "%lld analýza",
+      "few": "%lld analýzy",
+      "many": "%lld analýzy",
+      "other": "%lld analýz"
+    },
+    "sl": {
+      "one": "%lld analiza",
+      "two": "%lld analizi",
+      "few": "%lld analize",
+      "other": "%lld analiz"
+    },
+    "zh-Hant": {
+      "other": "%lld 次分析"
+    }
+  }
+}

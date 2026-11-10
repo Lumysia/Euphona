@@ -1,0 +1,1946 @@
+{
+  "tab_today": {
+    "en": "Today",
+    "zh-Hans": "今天"
+  },
+  "tab_practice": {
+    "en": "Practice",
+    "zh-Hans": "练习"
+  },
+  "tab_progress": {
+    "en": "Progress",
+    "zh-Hans": "进展"
+  },
+  "tab_learn": {
+    "en": "Learn",
+    "zh-Hans": "学习"
+  },
+  "action_analyze_voice": {
+    "en": "Analyze Voice",
+    "zh-Hans": "分析声音"
+  },
+  "orb_feminine": {
+    "en": "Feminine",
+    "zh-Hans": "女性化"
+  },
+  "orb_masculine": {
+    "en": "Masculine",
+    "zh-Hans": "男性化"
+  },
+  "today_latest_analysis": {
+    "en": "Latest analysis",
+    "zh-Hans": "最近一次分析"
+  },
+  "today_first_title": {
+    "en": "Meet your voice",
+    "zh-Hans": "认识你的声音"
+  },
+  "today_first_body": {
+    "en": "Read a short passage aloud. Euphona measures pitch, timbre, flow and ease on your device.",
+    "zh-Hans": "朗读一小段文字，Euphona 会在设备上分析你的音高、音色、流畅度和轻松度。"
+  },
+  "today_streak": {
+    "en": "%lld-day streak",
+    "zh-Hans": "连续 %lld 天"
+  },
+  "today_recent": {
+    "en": "Recent",
+    "zh-Hans": "最近记录"
+  },
+  "about_based_on": {
+    "en": "Inspired by",
+    "zh-Hans": "灵感来源"
+  },
+  "passage_editor_placeholder": {
+    "en": "Type or paste the text you want to read aloud.",
+    "zh-Hans": "输入或粘贴你想朗读的文字。"
+  },
+  "passage_editor_tip": {
+    "en": "A few sentences of everyday speech work best. Read at your usual pace.",
+    "zh-Hans": "几句日常口语就很合适，用平时的语速朗读即可。"
+  },
+  "settings_erase_all": {
+    "en": "Erase All Data",
+    "zh-Hans": "抹掉所有数据"
+  },
+  "settings_erase_all_message": {
+    "en": "All analyses, recordings, practice history and settings will be deleted from this device and from iCloud on all your devices. This can’t be undone.",
+    "zh-Hans": "所有分析、录音、练习记录和设置都将从本设备以及你所有设备的 iCloud 中删除，且无法恢复。"
+  },
+  "settings_general": {
+    "en": "General",
+    "zh-Hans": "通用"
+  },
+  "about_models_data": {
+    "en": "Models and data",
+    "zh-Hans": "模型与数据"
+  },
+  "onboarding_continue": {
+    "en": "Continue",
+    "zh-Hans": "继续"
+  },
+  "onboarding_icloud_title": {
+    "en": "Sync with iCloud",
+    "zh-Hans": "用 iCloud 同步"
+  },
+  "onboarding_icloud_body": {
+    "en": "Keep your analyses and recordings on all your devices. They are stored in your own private iCloud, and analysis always runs on your device.",
+    "zh-Hans": "在你的所有设备上保留测评结果和录音。它们只存放在你自己的私人 iCloud 里，分析始终在设备上进行。"
+  },
+  "onboarding_icloud_use": {
+    "en": "Use iCloud",
+    "zh-Hans": "使用 iCloud"
+  },
+  "onboarding_icloud_not_now": {
+    "en": "Not Now",
+    "zh-Hans": "以后再说"
+  },
+  "settings_icloud_sync": {
+    "en": "iCloud Sync",
+    "zh-Hans": "iCloud 同步"
+  },
+  "settings_icloud_sync_footer": {
+    "en": "Keeps your analyses and recordings in your private iCloud, in sync on all your devices. Turning it off keeps them on this device only.",
+    "zh-Hans": "把测评结果和录音保存在你的私人 iCloud 中，并在所有设备间同步。关闭后只保存在这台设备上。"
+  },
+  "spectrum_peak": {
+    "en": "Strongest frequency · %@",
+    "zh-Hans": "最强频率 · %@"
+  },
+  "piano_octave_down": {
+    "en": "Lower octave",
+    "zh-Hans": "低八度"
+  },
+  "piano_octave_up": {
+    "en": "Higher octave",
+    "zh-Hans": "高八度"
+  },
+  "error_save_failed": {
+    "en": "Couldn’t Save the Analysis",
+    "zh-Hans": "无法保存这次测评"
+  },
+  "error_save_failed_message": {
+    "en": "The result is shown here but isn’t in your history. If it keeps happening, restart Euphona.",
+    "zh-Hans": "结果显示在这里，但没有存进历史记录。如果一直这样，请重新打开 Euphona。"
+  },
+  "error_change_failed": {
+    "en": "Couldn’t Save the Change",
+    "zh-Hans": "无法保存更改"
+  },
+  "error_erase_failed": {
+    "en": "Couldn’t Erase Everything",
+    "zh-Hans": "无法抹掉全部数据"
+  },
+  "error_try_again": {
+    "en": "Try again. If it keeps happening, restart Euphona.",
+    "zh-Hans": "请再试一次。如果一直这样，请重新打开 Euphona。"
+  },
+  "error_store_unavailable": {
+    "en": "History Isn’t Being Saved",
+    "zh-Hans": "历史记录暂时无法保存"
+  },
+  "error_store_unavailable_message": {
+    "en": "Euphona couldn’t open its storage, so new analyses are kept only until you close the app. Restarting Euphona or the device usually fixes this.",
+    "zh-Hans": "Euphona 无法打开存储空间，新的测评只会保留到你关闭 App 为止。重新打开 Euphona 或重启设备通常可以解决。"
+  },
+  "action_open_settings": {
+    "en": "Open Settings",
+    "zh-Hans": "打开设置"
+  },
+  "action_ok": {
+    "en": "OK",
+    "zh-Hans": "好"
+  },
+  "playback_position": {
+    "en": "Playback position",
+    "zh-Hans": "播放位置"
+  },
+  "dashboard_share_recording": {
+    "en": "Share Recording",
+    "zh-Hans": "共享录音"
+  },
+  "dashboard_time_range": {
+    "en": "Time Range",
+    "zh-Hans": "时间范围"
+  },
+  "timbre_title": {
+    "en": "Timbre",
+    "zh-Hans": "音色"
+  },
+  "timbre_subtitle": {
+    "en": "Watch how your timbre reads as you speak",
+    "zh-Hans": "说话时实时查看音色"
+  },
+  "timbre_preparing": {
+    "en": "Loading the timbre model",
+    "zh-Hans": "正在载入音色模型"
+  },
+  "timbre_listening": {
+    "en": "Keep talking; a reading takes a second of speech",
+    "zh-Hans": "继续说话，大约一秒的语音才能给出读数"
+  },
+  "timbre_feminine_scale": {
+    "en": "Higher reads as more feminine",
+    "zh-Hans": "越高听起来越女性化"
+  },
+  "timbre_masculine_scale": {
+    "en": "Higher reads as more masculine",
+    "zh-Hans": "越高听起来越男性化"
+  },
+  "resonance_title": {
+    "en": "Resonance",
+    "zh-Hans": "共鸣"
+  },
+  "resonance_subtitle": {
+    "en": "Hold a vowel and see where it resonates",
+    "zh-Hans": "拖长一个元音，看看它的共鸣位置"
+  },
+  "resonance_hold_vowel": {
+    "en": "Hold a vowel, like “ee” or “ah”",
+    "zh-Hans": "拖长一个元音，比如“衣”或“啊”"
+  },
+  "resonance_reading": {
+    "en": "Brightness · /%1$@/ · F1 %2$@ · F2 %3$@",
+    "zh-Hans": "明亮度 · /%1$@/ · F1 %2$@ · F2 %3$@"
+  },
+  "pitch_target_toggle": {
+    "en": "Target Range",
+    "zh-Hans": "目标范围"
+  },
+  "pitch_on_target": {
+    "en": "%1$@ · %2$@ in range",
+    "zh-Hans": "%1$@ · %2$@ 在范围内"
+  },
+  "coach_ex_straw_title": {
+    "en": "Straw Phonation",
+    "zh-Hans": "吸管发声"
+  },
+  "coach_ex_straw_steps": {
+    "en": "1. Hold a drinking straw lightly between your lips.\n2. Hum “oo” through it, gently, with no air leaking from your nose.\n3. Slide slowly up and down through a comfortable range.\n4. Keep your shoulders, jaw and tongue loose.",
+    "zh-Hans": "1. 用嘴唇轻轻含住一根吸管。\n2. 通过吸管轻声哼“呜”，鼻子不漏气。\n3. 在舒服的范围内慢慢上下滑音。\n4. 肩膀、下巴和舌头保持放松。"
+  },
+  "coach_ex_straw_why": {
+    "en": "The straw backs air pressure up onto your vocal folds, so they vibrate with less effort. It is one of the best-studied warm-ups in voice therapy.",
+    "zh-Hans": "吸管让气压回到声带上，声带用更少的力气就能振动。这是嗓音治疗里研究最充分的热身方法之一。"
+  },
+  "coach_ex_straw_tip": {
+    "en": "If you feel buzzing in your lips and face, you are doing it right.",
+    "zh-Hans": "如果嘴唇和脸上有轻微的嗡嗡感，就说明做对了。"
+  },
+  "coach_ex_lip_trill_title": {
+    "en": "Lip Trills",
+    "zh-Hans": "唇颤音"
+  },
+  "coach_ex_lip_trill_steps": {
+    "en": "1. Close your lips loosely and blow so they flutter, like a motorboat.\n2. Add a gentle voice to the flutter.\n3. Glide up and down like a slow siren.\n4. If your lips stop, press your cheeks lightly with your fingertips.",
+    "zh-Hans": "1. 嘴唇轻轻闭合，吹气让它们抖动，像小摩托艇的声音。\n2. 在抖动里加上轻柔的声音。\n3. 像慢速警笛一样上下滑音。\n4. 如果嘴唇停下来，可以用指尖轻轻托住脸颊。"
+  },
+  "coach_ex_lip_trill_why": {
+    "en": "Like the straw, a lip trill keeps the voice light and well supported while the muscles warm up.",
+    "zh-Hans": "和吸管一样，唇颤音能让声音在肌肉热身时保持轻松、气息稳定。"
+  },
+  "coach_ex_lip_trill_tip": {
+    "en": "Keep the airflow steady; the sound should stay soft.",
+    "zh-Hans": "保持气流平稳，声音要轻。"
+  },
+  "coach_ex_hum_title": {
+    "en": "Gentle Humming",
+    "zh-Hans": "轻柔哼鸣"
+  },
+  "coach_ex_hum_steps": {
+    "en": "1. Sit comfortably and relax your shoulders.\n2. Hum “mmm” softly on one easy note, as if agreeing with someone.\n3. Breathe whenever you need to; never push.\n4. Stop if anything hurts.",
+    "zh-Hans": "1. 舒服地坐好，放松肩膀。\n2. 在一个轻松的音上轻声哼“嗯”，像在附和别人。\n3. 需要时随时换气，不要用力。\n4. 任何地方疼就停下来。"
+  },
+  "coach_ex_hum_why": {
+    "en": "Today is for rest. Quiet humming keeps the voice moving without strain; if pain or hoarseness lasts more than two weeks, see a doctor or speech therapist.",
+    "zh-Hans": "今天以休息为主。轻声哼鸣能让声音活动起来但不费力。如果疼痛或沙哑持续超过两周，请看医生或言语治疗师。"
+  },
+  "coach_ex_hum_tip": {
+    "en": "Soft and easy is the whole point today.",
+    "zh-Hans": "今天的重点就是轻、松。"
+  },
+  "coach_ex_pitch_hold_title": {
+    "en": "Find Your Note",
+    "zh-Hans": "找到你的音"
+  },
+  "coach_ex_pitch_hold_steps": {
+    "en": "1. Take a relaxed breath.\n2. Say “mmm-hmm” and let it settle into the shaded band.\n3. Hold an easy “mmm” or “ah” there, then let it go and find it again.\n4. Stay light: if it feels tight, come down a little.",
+    "zh-Hans": "1. 放松地吸一口气。\n2. 说“嗯哼”，让声音落进阴影范围里。\n3. 在那里轻松地保持“嗯”或“啊”，然后放开，再重新找到它。\n4. 保持轻松；觉得紧就稍微降一点。"
+  },
+  "coach_ex_pitch_hold_why": {
+    "en": "Pitch is the easiest part of the voice to hear and to change. Finding the band by feel, not just by ear, makes it easier to come back to.",
+    "zh-Hans": "音高是声音里最容易听出来、也最容易改变的部分。用身体的感觉而不只是耳朵找到它，以后更容易回到这里。"
+  },
+  "coach_ex_pitch_hold_tip": {
+    "en": "Aim for the middle of the band rather than its edge.",
+    "zh-Hans": "瞄准范围的中间，而不是边缘。"
+  },
+  "coach_ex_pitch_siren_title": {
+    "en": "Sirens",
+    "zh-Hans": "警笛滑音"
+  },
+  "coach_ex_pitch_siren_steps": {
+    "en": "1. On “ooo” or “ng”, follow the moving band up and back down.\n2. Glide smoothly, without jumps or breaks.\n3. Keep the volume soft and even.\n4. At the top, stay light rather than squeezing.",
+    "zh-Hans": "1. 用“呜”或“嗯（ng）”，跟着移动的范围往上再往下。\n2. 平滑地滑，不要跳音或断开。\n3. 音量保持轻而均匀。\n4. 到高处时保持轻松，不要挤。"
+  },
+  "coach_ex_pitch_siren_why": {
+    "en": "Sliding through your range stretches the muscles that set pitch and teaches control across all of it, not just at one note.",
+    "zh-Hans": "在音域里滑动能拉伸控制音高的肌肉，让你在整个范围里都能控制，而不只是一个音。"
+  },
+  "coach_ex_pitch_siren_tip": {
+    "en": "Slow down if you lose the band; smooth matters more than wide.",
+    "zh-Hans": "跟丢了就放慢，平滑比幅度大更重要。"
+  },
+  "coach_ex_pitch_count_title": {
+    "en": "Counting in Range",
+    "zh-Hans": "在范围内数数"
+  },
+  "coach_ex_pitch_count_steps": {
+    "en": "1. Count slowly from one to twenty.\n2. Keep each number inside the band.\n3. Connect the numbers a little, like speech, not singing.\n4. Breathe between groups of five.",
+    "zh-Hans": "1. 慢慢从一数到二十。\n2. 每个数字都保持在范围内。\n3. 数字之间稍微连起来，像说话，不像唱歌。\n4. 每五个数换一次气。"
+  },
+  "coach_ex_pitch_count_why": {
+    "en": "Counting moves the new pitch from a held note into speech, the step that makes it usable.",
+    "zh-Hans": "数数把新的音高从长音带进说话里，这一步让它真正能用。"
+  },
+  "coach_ex_pitch_count_tip": {
+    "en": "Start each number at the same height as the one before.",
+    "zh-Hans": "每个数字都从和上一个相同的高度开始。"
+  },
+  "coach_ex_pitch_sentences_title": {
+    "en": "Sentences in Range",
+    "zh-Hans": "在范围内说句子"
+  },
+  "coach_ex_pitch_sentences_steps": {
+    "en": "1. Say short sentences, such as “Good morning, how are you?” or “I'd like a coffee, please.”\n2. Keep most of each sentence inside the band.\n3. Let the pitch move naturally inside it.\n4. Pause between sentences and reset.",
+    "zh-Hans": "1. 说一些短句，比如“早上好，你好吗？”或“请给我一杯咖啡。”\n2. 每句话的大部分都保持在范围内。\n3. 让音高在范围里自然起伏。\n4. 句子之间停一下，重新找准。"
+  },
+  "coach_ex_pitch_sentences_why": {
+    "en": "Everyday phrases are where the voice is used most, so practising them carries over fastest.",
+    "zh-Hans": "日常短句是声音用得最多的地方，所以练它们最快能用到生活里。"
+  },
+  "coach_ex_pitch_sentences_tip": {
+    "en": "Ends of sentences tend to drop; keep them up a little.",
+    "zh-Hans": "句尾容易往下掉，稍微托住它。"
+  },
+  "coach_ex_vowel_bright_title": {
+    "en": "Bright “Ee”",
+    "zh-Hans": "明亮的“衣”"
+  },
+  "coach_ex_vowel_bright_steps": {
+    "en": "1. Say a long “eee”, as in “see”.\n2. Smile slightly and keep the tongue high and forward.\n3. Imagine the sound sitting just behind your front teeth.\n4. Watch the dot move up and left, toward the pink landmarks.",
+    "zh-Hans": "1. 拖长说“衣”，像英文“see”。\n2. 微微笑，舌头保持高而靠前。\n3. 想象声音就在门牙后面。\n4. 看圆点往左上方、往粉色标记移动。"
+  },
+  "coach_ex_vowel_bright_why": {
+    "en": "A shorter, more forward vocal tract raises the formants, which listeners hear as a brighter, more feminine voice, independent of pitch.",
+    "zh-Hans": "更短、更靠前的声道会提高共振峰，听者会觉得声音更明亮、更女性化，这和音高无关。"
+  },
+  "coach_ex_vowel_bright_tip": {
+    "en": "A slight smile and a raised tongue do most of the work.",
+    "zh-Hans": "微笑和抬高舌头起了大部分作用。"
+  },
+  "coach_ex_vowel_dark_title": {
+    "en": "Deep “Oo”",
+    "zh-Hans": "深沉的“乌”"
+  },
+  "coach_ex_vowel_dark_steps": {
+    "en": "1. Say a long “ooo”, as in “too”.\n2. Round your lips and let your jaw drop slightly.\n3. Feel the sound sit low in your throat and chest, without pressing.\n4. Watch the dot move down and right, toward the blue landmarks.",
+    "zh-Hans": "1. 拖长说“乌”，像英文“too”。\n2. 嘴唇拢圆，下巴稍微放下。\n3. 感觉声音在喉咙和胸口低处，但不要压。\n4. 看圆点往右下方、往蓝色标记移动。"
+  },
+  "coach_ex_vowel_dark_why": {
+    "en": "A longer vocal tract lowers the formants, which listeners hear as a darker, more masculine voice, independent of pitch.",
+    "zh-Hans": "更长的声道会降低共振峰，听者会觉得声音更深、更男性化，这和音高无关。"
+  },
+  "coach_ex_vowel_dark_tip": {
+    "en": "Rounded lips lengthen the tract; never push the larynx down hard.",
+    "zh-Hans": "拢圆嘴唇能加长声道；不要用力往下压喉咙。"
+  },
+  "coach_ex_dog_bright_title": {
+    "en": "Small Dog Pant",
+    "zh-Hans": "小狗喘气"
+  },
+  "coach_ex_dog_bright_steps": {
+    "en": "1. Pant lightly and quickly like a small dog; feel the larynx rise.\n2. Keep that high, small feeling and say “ah”.\n3. Then try “ee”, “ay” and “oh” the same way.\n4. Release if anything feels tight.",
+    "zh-Hans": "1. 像小狗一样轻快地喘气，感觉喉头往上提。\n2. 保持这种高而小的感觉，说“啊”。\n3. 再用同样的方式试“衣”“诶”“哦”。\n4. 觉得紧就放松。"
+  },
+  "coach_ex_dog_bright_why": {
+    "en": "Raising the larynx shortens the vocal tract. Panting finds that position without forcing it.",
+    "zh-Hans": "抬高喉头能缩短声道。喘气能自然找到这个位置，而不用硬推。"
+  },
+  "coach_ex_dog_bright_tip": {
+    "en": "Keep your throat open; the lift should feel small, not squeezed.",
+    "zh-Hans": "喉咙保持打开，抬起来的感觉要小，不是挤。"
+  },
+  "coach_ex_dog_dark_title": {
+    "en": "Big Dog Pant",
+    "zh-Hans": "大狗喘气"
+  },
+  "coach_ex_dog_dark_steps": {
+    "en": "1. Pant slowly and deeply like a big dog; feel the larynx settle low.\n2. Keep that roomy feeling and say “ah”.\n3. Then try “oh”, “oo” and “aw” the same way.\n4. Release if anything feels pressed.",
+    "zh-Hans": "1. 像大狗一样慢而深地喘气，感觉喉头往下沉。\n2. 保持这种宽敞的感觉，说“啊”。\n3. 再用同样的方式试“哦”“乌”“奥”。\n4. 觉得压着就放松。"
+  },
+  "coach_ex_dog_dark_why": {
+    "en": "Lowering the larynx lengthens the vocal tract. Slow panting finds that position without pushing.",
+    "zh-Hans": "放低喉头能加长声道。慢慢喘气能自然找到这个位置，而不用硬压。"
+  },
+  "coach_ex_dog_dark_tip": {
+    "en": "Roomy, not pressed: the throat should feel open.",
+    "zh-Hans": "要宽敞而不是压着，喉咙应该是打开的。"
+  },
+  "coach_ex_timbre_words_title": {
+    "en": "Timbre in Words",
+    "zh-Hans": "词语里的音色"
+  },
+  "coach_ex_timbre_words_steps": {
+    "en": "1. Keep the resonance you found and say single words: names of days, colours, fruits.\n2. Watch the meter after each few words.\n3. If it drops, go back to the vowel exercise for a moment, then try again.",
+    "zh-Hans": "1. 保持刚才找到的共鸣，说单个词语：星期、颜色、水果的名字。\n2. 每说几个词看一下读数。\n3. 如果掉下来，先回到元音练习找一下感觉，再继续。"
+  },
+  "coach_ex_timbre_words_why": {
+    "en": "The timbre meter listens to the whole voice, the way the overall score does, so it shows whether resonance holds up in real words.",
+    "zh-Hans": "音色读数听的是整个声音，和总分的方式一样，所以它能看出共鸣在真实词语里能否保持。"
+  },
+  "coach_ex_timbre_words_tip": {
+    "en": "Short words with “ee” and “ay” are the easiest place to start.",
+    "zh-Hans": "带“衣”“诶”音的短词最容易开始。"
+  },
+  "coach_ex_timbre_sentences_title": {
+    "en": "Timbre in Sentences",
+    "zh-Hans": "句子里的音色"
+  },
+  "coach_ex_timbre_sentences_steps": {
+    "en": "1. Describe your room or your day in short sentences.\n2. Keep the resonance and pitch you have practised.\n3. Glance at the meter, but keep talking naturally.",
+    "zh-Hans": "1. 用短句描述你的房间或今天。\n2. 保持练过的共鸣和音高。\n3. 偶尔看一下读数，但要自然地说下去。"
+  },
+  "coach_ex_timbre_sentences_why": {
+    "en": "Holding timbre through connected speech is what makes the new voice sound like you, not like an exercise.",
+    "zh-Hans": "在连贯的说话里保持音色，新的声音才会像你自己，而不像在练习。"
+  },
+  "coach_ex_timbre_sentences_tip": {
+    "en": "Slow down a little; speed makes resonance slip.",
+    "zh-Hans": "稍微放慢，语速快了共鸣容易跑。"
+  },
+  "coach_ex_question_rise_title": {
+    "en": "Rising Questions",
+    "zh-Hans": "上扬的问句"
+  },
+  "coach_ex_question_rise_steps": {
+    "en": "1. Ask short questions: “Really?”, “Are you sure?”, “Is it today?”\n2. Let each one rise and fall with the band.\n3. Keep it relaxed and conversational.",
+    "zh-Hans": "1. 问一些短问题：“真的吗？”“你确定？”“是今天吗？”\n2. 让每一句跟着范围上扬再落下。\n3. 保持放松，像在聊天。"
+  },
+  "coach_ex_question_rise_why": {
+    "en": "Movement in pitch carries meaning and liveliness. Practising it keeps the voice expressive instead of flat at one note.",
+    "zh-Hans": "音高的起伏能传达意思和活力。练习它能让声音有表情，而不是停在一个音上。"
+  },
+  "coach_ex_question_rise_tip": {
+    "en": "Let the voice move; a rise is a glide, not a jump.",
+    "zh-Hans": "让声音动起来，上扬是滑上去，不是跳上去。"
+  },
+  "coach_ex_reading_flow_title": {
+    "en": "Fluent Reading",
+    "zh-Hans": "流畅朗读"
+  },
+  "coach_ex_reading_flow_steps": {
+    "en": "1. Read the passage aloud at an easy, even pace.\n2. Pause at commas and full stops, and breathe there.\n3. Keep your voice light and unforced from start to finish.",
+    "zh-Hans": "1. 用轻松、均匀的语速朗读这段文字。\n2. 在逗号和句号处停顿、换气。\n3. 从头到尾保持声音轻松、不用力。"
+  },
+  "coach_ex_reading_flow_why": {
+    "en": "Flow measures an even pace without long stops. Reading lets you practise it while keeping your new pitch and resonance.",
+    "zh-Hans": "流畅度衡量的是均匀的语速、没有长时间的停顿。朗读能让你在保持新音高和共鸣的同时练习这一点。"
+  },
+  "coach_ex_reading_flow_tip": {
+    "en": "If you push or rush, slow down and breathe at the commas.",
+    "zh-Hans": "如果在用力或赶，就放慢，在逗号处换气。"
+  },
+  "coach_ex_reading_score_title": {
+    "en": "Reading Check",
+    "zh-Hans": "朗读测评"
+  },
+  "coach_ex_reading_score_steps": {
+    "en": "1. Read the passage aloud the way you want to sound.\n2. Use everything so far: pitch, resonance and an easy flow.\n3. Look at the result to see which part holds you back.",
+    "zh-Hans": "1. 用你想要的声音朗读这段文字。\n2. 用上目前学到的一切：音高、共鸣和流畅。\n3. 看结果，找出拖后腿的那一项。"
+  },
+  "coach_ex_reading_score_why": {
+    "en": "A full analysis brings every skill together, the same measure as Analyze Voice.",
+    "zh-Hans": "完整测评把所有技能放在一起，和“声音测评”是同一个标准。"
+  },
+  "coach_ex_reading_score_tip": {
+    "en": "The weakest of the three scores is the one to practise next.",
+    "zh-Hans": "三项里最低的那一项，就是下一步要练的。"
+  },
+  "coach_ex_talk_title": {
+    "en": "Talk Freely",
+    "zh-Hans": "自由说话"
+  },
+  "coach_ex_talk_steps": {
+    "en": "1. Read the prompt, then talk about it as you would to a friend.\n2. Don't plan sentences; just keep going until the timer ends.\n3. Let the new voice be your normal voice.",
+    "zh-Hans": "1. 看提示，然后像跟朋友聊天一样说一说。\n2. 不用想好句子，一直说到计时结束。\n3. 让新的声音成为你平常的声音。"
+  },
+  "coach_ex_talk_why": {
+    "en": "Speaking without a script is the real test: it shows how much of your practice comes with you into everyday talk.",
+    "zh-Hans": "没有稿子的说话才是真正的考验：它能看出练习有多少带进了日常聊天里。"
+  },
+  "coach_ex_talk_tip": {
+    "en": "If the voice slips while you think, pause, find it, and go on.",
+    "zh-Hans": "想事情时声音跑了，就停一下，找回来，再继续。"
+  },
+  "tab_coach": {
+    "en": "Coach",
+    "zh-Hans": "教练"
+  },
+  "coach_action_again": {
+    "en": "Try Again",
+    "zh-Hans": "再试一次"
+  },
+  "coach_action_easier": {
+    "en": "Try an Easier One",
+    "zh-Hans": "换个简单的"
+  },
+  "coach_action_harder": {
+    "en": "Try a Harder One",
+    "zh-Hans": "挑战难一点的"
+  },
+  "coach_action_next": {
+    "en": "Continue",
+    "zh-Hans": "继续"
+  },
+  "coach_check_in_title": {
+    "en": "How Does Your Voice Feel Today?",
+    "zh-Hans": "今天嗓子感觉怎么样？"
+  },
+  "coach_check_in_body": {
+    "en": "Your answer shapes today’s lesson.",
+    "zh-Hans": "你的回答会决定今天的课程。"
+  },
+  "coach_check_in_pain": {
+    "en": "Pain, hoarseness or a sore throat",
+    "zh-Hans": "疼痛、沙哑或喉咙痛"
+  },
+  "coach_check_in_footer": {
+    "en": "If it hurts or feels very tired, today becomes a rest day with gentle humming only. Pain or hoarseness lasting more than two weeks is worth a visit to a doctor or speech therapist.",
+    "zh-Hans": "如果疼或非常疲劳，今天会变成只做轻柔哼鸣的休息日。疼痛或沙哑持续超过两周，建议去看医生或言语治疗师。"
+  },
+  "coach_comfort_1": {
+    "en": "Sore",
+    "zh-Hans": "难受"
+  },
+  "coach_comfort_2": {
+    "en": "Tired",
+    "zh-Hans": "疲劳"
+  },
+  "coach_comfort_3": {
+    "en": "Okay",
+    "zh-Hans": "还行"
+  },
+  "coach_comfort_4": {
+    "en": "Good",
+    "zh-Hans": "不错"
+  },
+  "coach_comfort_5": {
+    "en": "Fresh",
+    "zh-Hans": "很好"
+  },
+  "coach_continue": {
+    "en": "Continue",
+    "zh-Hans": "继续"
+  },
+  "coach_done": {
+    "en": "Done",
+    "zh-Hans": "完成"
+  },
+  "coach_done_today": {
+    "en": "Done for Today",
+    "zh-Hans": "今天已完成"
+  },
+  "coach_finish": {
+    "en": "Finish",
+    "zh-Hans": "结束"
+  },
+  "coach_lesson_done": {
+    "en": "Lesson Complete",
+    "zh-Hans": "课程完成"
+  },
+  "coach_lesson_done_body": {
+    "en": "Every try is saved, and tomorrow’s lesson builds on it.",
+    "zh-Hans": "每次尝试都已保存，明天的课程会在此基础上继续。"
+  },
+  "coach_lesson_length": {
+    "en": "About %lld min",
+    "zh-Hans": "约 %lld 分钟"
+  },
+  "coach_measured_against_goal": {
+    "en": "%1$@ · goal %2$@",
+    "zh-Hans": "%1$@ · 目标 %2$@"
+  },
+  "coach_model_footer_cloud": {
+    "en": "Reviews are written by Apple Intelligence with Private Cloud Compute. Change this in Settings.",
+    "zh-Hans": "点评由 Apple 智能通过私有云计算撰写。可以在设置中更改。"
+  },
+  "coach_model_footer_device": {
+    "en": "Reviews are written by Apple Intelligence on this device. Change this in Settings.",
+    "zh-Hans": "点评由本机上的 Apple 智能撰写。可以在设置中更改。"
+  },
+  "coach_model_footer_written": {
+    "en": "Reviews come from Euphona’s built-in coach. Exercises and measurements are the same either way.",
+    "zh-Hans": "点评来自 Euphona 内置的教练。练习和测量方式都一样。"
+  },
+  "coach_notes_title": {
+    "en": "From Your Coach",
+    "zh-Hans": "教练的话"
+  },
+  "coach_outcome_close": {
+    "en": "Close",
+    "zh-Hans": "差一点"
+  },
+  "coach_outcome_missed": {
+    "en": "Not Yet",
+    "zh-Hans": "还没达到"
+  },
+  "coach_outcome_passed": {
+    "en": "Well Done",
+    "zh-Hans": "做得好"
+  },
+  "coach_outcome_unmeasured": {
+    "en": "Couldn’t Hear Enough",
+    "zh-Hans": "没听到足够的声音"
+  },
+  "coach_path_title": {
+    "en": "Your Path",
+    "zh-Hans": "你的路线"
+  },
+  "coach_pause": {
+    "en": "Pause",
+    "zh-Hans": "暂停"
+  },
+  "coach_practice_again": {
+    "en": "Practice Again",
+    "zh-Hans": "再练一次"
+  },
+  "coach_practice_with_coach": {
+    "en": "Practice with the Coach",
+    "zh-Hans": "跟着教练练习"
+  },
+  "coach_record": {
+    "en": "Record",
+    "zh-Hans": "录音"
+  },
+  "coach_recorded_hint": {
+    "en": "This step records and analyzes your voice, the same as Analyze Voice. Close the result when you’ve seen it to continue.",
+    "zh-Hans": "这一步会录音并分析你的声音，和“声音测评”一样。看完结果后关闭，就能继续。"
+  },
+  "coach_rest_day": {
+    "en": "Rest Day",
+    "zh-Hans": "休息日"
+  },
+  "coach_review_close": {
+    "en": "Close: %1$@, and the goal is %2$@. %3$@",
+    "zh-Hans": "差一点：%1$@，目标是 %2$@。%3$@"
+  },
+  "coach_review_missed": {
+    "en": "%1$@ this time; the goal is %2$@. %3$@",
+    "zh-Hans": "这次 %1$@，目标是 %2$@。%3$@"
+  },
+  "coach_review_passed": {
+    "en": "Well done: %1$@, against a goal of %2$@.",
+    "zh-Hans": "做得好：%1$@，目标是 %2$@。"
+  },
+  "coach_review_unmeasured": {
+    "en": "I couldn’t hear enough to measure that. Start the tool and keep going until the time is up.",
+    "zh-Hans": "没听到足够的声音来测量。开始后请一直练到时间结束。"
+  },
+  "coach_review_warmed_up": {
+    "en": "Nicely done. Your voice is warmed up.",
+    "zh-Hans": "做得好，嗓子热身好了。"
+  },
+  "coach_skill_carry_over": {
+    "en": "Everyday Speech",
+    "zh-Hans": "日常说话"
+  },
+  "coach_skill_carry_over_summary": {
+    "en": "Use the new voice when you talk freely",
+    "zh-Hans": "在自由说话时用上新的声音"
+  },
+  "coach_skill_complete": {
+    "en": "Complete",
+    "zh-Hans": "已完成"
+  },
+  "coach_skill_intonation": {
+    "en": "Intonation and Flow",
+    "zh-Hans": "语调与流畅"
+  },
+  "coach_skill_intonation_summary": {
+    "en": "Lively melody, an even pace, no strain",
+    "zh-Hans": "有起伏的语调、均匀的语速、不费力"
+  },
+  "coach_skill_level": {
+    "en": "Level %1$lld of %2$lld",
+    "zh-Hans": "第 %1$lld / %2$lld 级"
+  },
+  "coach_skill_pitch": {
+    "en": "Pitch",
+    "zh-Hans": "音高"
+  },
+  "coach_skill_pitch_summary": {
+    "en": "Find and hold your target range",
+    "zh-Hans": "找到并保持目标音高范围"
+  },
+  "coach_skill_resonance": {
+    "en": "Resonance",
+    "zh-Hans": "共鸣"
+  },
+  "coach_skill_resonance_summary": {
+    "en": "Shape a brighter or darker sound",
+    "zh-Hans": "塑造更明亮或更深沉的声音"
+  },
+  "coach_start": {
+    "en": "Start",
+    "zh-Hans": "开始"
+  },
+  "coach_start_lesson": {
+    "en": "Start Lesson",
+    "zh-Hans": "开始课程"
+  },
+  "coach_step_of": {
+    "en": "Step %1$lld of %2$lld",
+    "zh-Hans": "第 %1$lld / %2$lld 步"
+  },
+  "coach_thinking": {
+    "en": "Your coach is looking at this try…",
+    "zh-Hans": "教练正在看这次尝试……"
+  },
+  "coach_time_left": {
+    "en": "%@ left",
+    "zh-Hans": "剩余 %@"
+  },
+  "coach_todays_lesson": {
+    "en": "Today’s Lesson",
+    "zh-Hans": "今天的课程"
+  },
+  "coach_value_brightness": {
+    "en": "brightness %@",
+    "zh-Hans": "明亮度 %@"
+  },
+  "coach_value_completed": {
+    "en": "%@ of the time",
+    "zh-Hans": "完成了 %@"
+  },
+  "coach_value_on_target": {
+    "en": "%@ in range",
+    "zh-Hans": "%@ 在范围内"
+  },
+  "coach_value_score": {
+    "en": "score %@",
+    "zh-Hans": "得分 %@"
+  },
+  "coach_value_timbre": {
+    "en": "timbre %@",
+    "zh-Hans": "音色 %@"
+  },
+  "coach_warm_up": {
+    "en": "Warm-Up",
+    "zh-Hans": "热身"
+  },
+  "coach_talk_prompt_1": {
+    "en": "Describe what you had for breakfast and how you made it.",
+    "zh-Hans": "说说你早餐吃了什么，是怎么做的。"
+  },
+  "coach_talk_prompt_2": {
+    "en": "Tell me about a place you’d like to visit, and why.",
+    "zh-Hans": "说一个你想去的地方，以及为什么。"
+  },
+  "coach_talk_prompt_3": {
+    "en": "What did you do last weekend?",
+    "zh-Hans": "你上个周末做了什么？"
+  },
+  "coach_talk_prompt_4": {
+    "en": "Describe your favourite room at home.",
+    "zh-Hans": "描述一下你家里最喜欢的房间。"
+  },
+  "coach_talk_prompt_5": {
+    "en": "Tell me about a film, show or book you enjoyed recently.",
+    "zh-Hans": "说说你最近喜欢的一部电影、剧或书。"
+  },
+  "coach_talk_prompt_6": {
+    "en": "How would you give a friend directions to your home?",
+    "zh-Hans": "你会怎么给朋友指路到你家？"
+  },
+  "coach_talk_prompt_7": {
+    "en": "What is something you’re looking forward to?",
+    "zh-Hans": "有什么事是你很期待的？"
+  },
+  "coach_talk_prompt_8": {
+    "en": "Describe the weather today and what you’d like to do in it.",
+    "zh-Hans": "描述一下今天的天气，以及你想在这样的天气里做什么。"
+  },
+  "onboarding_coach_title": {
+    "en": "Your Coach",
+    "zh-Hans": "你的教练"
+  },
+  "onboarding_coach_body": {
+    "en": "Every day the Coach picks a short lesson, watches each try with Euphona’s tools and decides what comes next. Choose who writes its reviews.",
+    "zh-Hans": "教练每天安排一节短课，用 Euphona 的工具看你每次尝试，再决定下一步。选择由谁来写点评。"
+  },
+  "coach_model_on_device": {
+    "en": "Apple Intelligence on This Device",
+    "zh-Hans": "本机上的 Apple 智能"
+  },
+  "coach_model_on_device_detail": {
+    "en": "Reviews are written on your device and never leave it.",
+    "zh-Hans": "点评在你的设备上生成，不会离开设备。"
+  },
+  "coach_model_cloud": {
+    "en": "Apple Intelligence with Private Cloud Compute",
+    "zh-Hans": "Apple 智能（私有云计算）"
+  },
+  "coach_model_cloud_detail": {
+    "en": "A larger model on Apple’s servers writes the reviews. Apple doesn’t store what it sees.",
+    "zh-Hans": "由 Apple 服务器上更大的模型撰写点评。Apple 不会保存它看到的内容。"
+  },
+  "coach_model_off": {
+    "en": "Built-In Coach",
+    "zh-Hans": "内置教练"
+  },
+  "coach_model_off_detail": {
+    "en": "Euphona’s own written reviews. Exercises and measurements are the same with every choice.",
+    "zh-Hans": "Euphona 自带的书面点评。无论选哪种，练习和测量方式都一样。"
+  },
+  "settings_coach_model": {
+    "en": "Coach",
+    "zh-Hans": "教练"
+  },
+  "settings_coach_model_unavailable": {
+    "en": "Apple Intelligence isn’t available on this device or in this language right now, so the built-in coach writes the reviews.",
+    "zh-Hans": "Apple 智能目前在这台设备或这种语言下不可用，所以由内置教练撰写点评。"
+  },
+  "voice_quality_title": {
+    "en": "Voice Quality",
+    "zh-Hans": "嗓音质量"
+  },
+  "voice_quality_subtitle": {
+    "en": "Talk for about 20 seconds to hear how your voice sounds today",
+    "zh-Hans": "说大约 20 秒，看看今天嗓音听起来怎么样"
+  },
+  "voice_quality_card_subtitle": {
+    "en": "How clear and easy your voice sounds today",
+    "zh-Hans": "今天的声音听起来有多清亮、轻松"
+  },
+  "voice_quality_failed": {
+    "en": "Couldn’t Check Your Voice",
+    "zh-Hans": "无法检测嗓音"
+  },
+  "voice_quality_result_clear": {
+    "en": "Your voice sounds clear and easy",
+    "zh-Hans": "声音听起来清亮、轻松"
+  },
+  "voice_quality_result_rest": {
+    "en": "Your voice sounds strained or rough today",
+    "zh-Hans": "今天声音听起来有些紧或沙哑"
+  },
+  "voice_quality_recording_unsuitable": {
+    "en": "This recording can’t be judged",
+    "zh-Hans": "这段录音无法用于判断"
+  },
+  "voice_quality_stop": {
+    "en": "Enough speech. Stop whenever you like",
+    "zh-Hans": "说得够了，随时可以停止"
+  },
+  "voice_quality_keep_talking": {
+    "en": "Keep talking: about anything, at your usual volume",
+    "zh-Hans": "继续说吧：说什么都行，用平常的音量"
+  },
+  "voice_quality_record_again": {
+    "en": "Record Again",
+    "zh-Hans": "重新录制"
+  },
+  "voice_quality_speech_progress": {
+    "en": "%1$.0f of %2$.0f s of speech",
+    "zh-Hans": "已说 %1$.0f / %2$.0f 秒"
+  },
+  "voice_quality_stage_scoring": {
+    "en": "Estimating voice quality",
+    "zh-Hans": "正在估计嗓音质量"
+  },
+  "voice_quality_stage_completed": {
+    "en": "Done",
+    "zh-Hans": "完成"
+  },
+  "voice_quality_comfort_title": {
+    "en": "How does it feel to you?",
+    "zh-Hans": "你自己感觉怎么样？"
+  },
+  "voice_quality_rest_advice": {
+    "en": "Give your voice a quiet day: water, rest and gentle humming. If pain or hoarseness lasts more than two weeks, see a doctor or speech therapist.",
+    "zh-Hans": "让嗓子安静一天：多喝水、休息、轻轻哼鸣。如果疼痛或沙哑持续超过两周，请看医生或言语治疗师。"
+  },
+  "voice_quality_disclaimer": {
+    "en": "An estimate of how a voice sounds to listeners, from a model trained on listener ratings. It is not a medical diagnosis.",
+    "zh-Hans": "这是根据听者评分训练的模型，对声音听起来如何的估计，不是医学诊断。"
+  },
+  "voice_quality_issue_clipping": {
+    "en": "The recording was too loud and distorted. Hold the device a little further away or speak a little softer.",
+    "zh-Hans": "录音太响、失真了。把设备拿远一点，或者说话稍微轻一点。"
+  },
+  "voice_quality_issue_noisy": {
+    "en": "There is too much background noise. Find a quieter place, or turn off fans and music.",
+    "zh-Hans": "背景噪音太大。换个安静的地方，或者关掉风扇和音乐。"
+  },
+  "voice_quality_issue_too_little_voice": {
+    "en": "There was too little voiced speech. Talk steadily for at least 20 seconds, without long pauses or whispering.",
+    "zh-Hans": "有声的语音太少。请连续说至少 20 秒，不要长时间停顿或耳语。"
+  },
+  "listen_back_title": {
+    "en": "Listen Back",
+    "zh-Hans": "回听对比"
+  },
+  "listen_back_footer": {
+    "en": "Play this recording and the last one toward the same goal, one after the other.",
+    "zh-Hans": "依次播放这次和上一次同一目标的录音。"
+  },
+  "listen_back_this_time": {
+    "en": "This time",
+    "zh-Hans": "这一次"
+  },
+  "coach_you_said": {
+    "en": "You said",
+    "zh-Hans": "你说的是"
+  },
+  "coach_words_per_minute": {
+    "en": "About %@ words a minute",
+    "zh-Hans": "大约每分钟 %@ 个词"
+  },
+  "coach_review_leap": {
+    "en": "Excellent: %1$@, well past the goal of %2$@. Moving you up a level.",
+    "zh-Hans": "非常好：%1$@，远超目标 %2$@。直接升一级。"
+  },
+  "coach_starting_point": {
+    "en": "Starting Point",
+    "zh-Hans": "起点"
+  },
+  "coach_starting_point_footer": {
+    "en": "From your latest analyses. They set the level each skill starts at and targets just past where you are; every new analysis updates both.",
+    "zh-Hans": "来自你最近的分析。它们决定每项技能从第几级开始，并把目标定在比现在稍好一点的地方；每次新的分析都会同时更新。"
+  },
+  "coach_next_step": {
+    "en": "Next: %1$@ · goal %2$@",
+    "zh-Hans": "下一步：%1$@ · 目标 %2$@"
+  },
+  "coach_next_finish": {
+    "en": "That was the last step of today’s lesson.",
+    "zh-Hans": "这是今天课程的最后一步。"
+  },
+  "score_component_weight": {
+    "en": "× %@ in the voice score",
+    "zh-Hans": "在声音分中占 %@"
+  },
+  "score_component_pitch_progress": {
+    "en": "%1$@ of 100 toward the goal · × %2$@",
+    "zh-Hans": "向目标进度 %1$@/100 · 占 %2$@"
+  },
+  "score_component_fluency": {
+    "en": "Fluency × %@",
+    "zh-Hans": "流畅系数 × %@"
+  },
+  "score_component_gain": {
+    "en": "Up to +%@ points",
+    "zh-Hans": "最多还能 +%@ 分"
+  },
+  "score_components_title": {
+    "en": "Components",
+    "zh-Hans": "分项"
+  },
+  "score_components_footer": {
+    "en": "Timbre and ease come from Euphona’s models, flow from your pace and pauses. Pitch is your typical speaking pitch (the median), counted evenly in semitones from typical masculine speech (115 Hz) to typical feminine speech (205 Hz).",
+    "zh-Hans": "音色和轻松度来自 Euphona 的模型，流畅度来自你的语速和停顿。音高是你说话的典型音高（中位数），从典型男声（115 Hz）到典型女声（205 Hz）按半音均匀计算。"
+  },
+  "score_components_footer_masculine": {
+    "en": "Timbre and ease come from Euphona’s models, flow from your pace and pauses. Pitch is your typical speaking pitch (the median), counted evenly in semitones from typical feminine speech (205 Hz) down to typical masculine speech (115 Hz).",
+    "zh-Hans": "音色和轻松度来自 Euphona 的模型，流畅度来自你的语速和停顿。音高是你说话的典型音高（中位数），从典型女声（205 Hz）到典型男声（115 Hz）按半音均匀计算。"
+  },
+  "score_formula_title": {
+    "en": "Formula",
+    "zh-Hans": "公式"
+  },
+  "score_formula_footer": {
+    "en": "One formula for every goal, with no caps or cut-offs: a small change in your voice is a small change in the score. Fluency follows the lower of flow and ease: nothing comes off while both are 80 or more, and at most a fifth of the score below that. A full 100 needs both timbre and pitch at the goal.",
+    "zh-Hans": "所有目标都用同一个公式，没有封顶也没有断崖：声音变化一点，分数也只变化一点。流畅系数看流畅度和轻松度中较低的那个：两者都在 80 以上时不扣分，低于 80 时最多扣五分之一。要拿满 100 分，音色和音高都要达到目标。"
+  },
+  "score_focus_none_title": {
+    "en": "Your voice is at its goal",
+    "zh-Hans": "你的声音已经达到目标"
+  },
+  "score_focus_none": {
+    "en": "Every part is close to full marks. Keep using this voice in everyday speech.",
+    "zh-Hans": "每一项都接近满分。继续在日常说话里使用这个声音吧。"
+  },
+  "score_focus_timbre_title": {
+    "en": "Timbre has the most to gain",
+    "zh-Hans": "音色提升空间最大"
+  },
+  "score_focus_timbre": {
+    "en": "Work on resonance: it comes from the shape of your mouth and throat, not from pitch. The Resonance and Timbre tools and the Coach’s resonance lessons train it.",
+    "zh-Hans": "练习共鸣：它来自口腔和喉咙的形状，而不是音高。“共鸣”“音色”工具和教练的共鸣课程都能练它。"
+  },
+  "score_focus_timbre_no_pitch": {
+    "en": "No steady pitch was found, so timbre carries the voice score. Speak a little longer and more steadily to include pitch.",
+    "zh-Hans": "没有检测到稳定的音高，所以声音分只看音色。说得再长一些、稳一些，就能把音高也算进去。"
+  },
+  "score_focus_pitch_title": {
+    "en": "Pitch has the most to gain",
+    "zh-Hans": "音高提升空间最大"
+  },
+  "score_focus_pitch": {
+    "en": "Move your speaking pitch toward the goal a little at a time. The Pitch tool shows a target range to stay in.",
+    "zh-Hans": "一点一点把说话的音高往目标方向移动。“音高”工具会显示一个目标范围。"
+  },
+  "pitch_reference_subtitle": {
+    "en": "Typical speaking pitch: about 85–155 Hz for men, 165–255 Hz for women",
+    "zh-Hans": "典型说话音高：男声约 85–155 Hz，女声约 165–255 Hz"
+  },
+  "coach_tell_title": {
+    "en": "Tell the coach",
+    "zh-Hans": "告诉教练"
+  },
+  "coach_tell_too_easy": {
+    "en": "Too easy",
+    "zh-Hans": "太简单了"
+  },
+  "coach_tell_too_hard": {
+    "en": "Too hard",
+    "zh-Hans": "太难了"
+  },
+  "coach_tell_tired": {
+    "en": "My voice is tired",
+    "zh-Hans": "嗓子累了"
+  },
+  "coach_tell_focus": {
+    "en": "I’d like to practise %@",
+    "zh-Hans": "我想练%@"
+  },
+  "coach_tell_practise": {
+    "en": "Practise…",
+    "zh-Hans": "想练…"
+  },
+  "coach_tell_back_to_plan": {
+    "en": "Back to my plan",
+    "zh-Hans": "回到原计划"
+  },
+  "coach_tell_active": {
+    "en": "Today’s lesson follows what you asked. Tomorrow it follows your results again.",
+    "zh-Hans": "今天的课程按你的要求调整过了，明天会重新按你的成绩安排。"
+  },
+  "coach_answer_harder": {
+    "en": "Okay: %1$@ moves up to level %2$lld for the rest of today. If it’s still easy, tell me again.",
+    "zh-Hans": "好，今天接下来的%1$@提高到第 %2$lld 级。如果还是简单，再告诉我。"
+  },
+  "coach_answer_easier": {
+    "en": "Okay: %1$@ goes down to level %2$lld for the rest of today. Small steps count too.",
+    "zh-Hans": "好，今天接下来的%1$@降到第 %2$lld 级。小步前进也是进步。"
+  },
+  "coach_answer_rest": {
+    "en": "Let’s rest your voice today: only gentle humming. If it hurts or stays hoarse, rest until it feels better.",
+    "zh-Hans": "今天让嗓子休息吧，只做轻柔的哼鸣。如果疼痛或一直沙哑，就休息到好了再练。"
+  },
+  "coach_answer_focus": {
+    "en": "Today’s lesson works on %@.",
+    "zh-Hans": "今天的课程练%@。"
+  },
+  "coach_answer_back_to_plan": {
+    "en": "Back to your plan: today follows your results again.",
+    "zh-Hans": "回到原计划：今天重新按你的成绩安排。"
+  },
+  "coach_chat_open": {
+    "en": "Talk to the coach",
+    "zh-Hans": "和教练聊聊"
+  },
+  "coach_chat_title": {
+    "en": "Coach",
+    "zh-Hans": "教练"
+  },
+  "coach_chat_placeholder": {
+    "en": "Message the coach",
+    "zh-Hans": "给教练发消息"
+  },
+  "coach_chat_send": {
+    "en": "Send",
+    "zh-Hans": "发送"
+  },
+  "coach_chat_you": {
+    "en": "You",
+    "zh-Hans": "你"
+  },
+  "coach_chat_coach": {
+    "en": "Coach",
+    "zh-Hans": "教练"
+  },
+  "coach_chat_empty": {
+    "en": "Tell the coach how practice feels, ask about an exercise, or ask for something different today. The coach changes your plan when you ask.",
+    "zh-Hans": "告诉教练练习的感觉、问问某个练习，或者要求今天换个练法。你提出来，教练就会调整计划。"
+  },
+  "coach_chat_empty_written": {
+    "en": "Use the quick replies to tell the coach how practice feels. The coach changes your plan right away.",
+    "zh-Hans": "用下面的快捷回复告诉教练练习的感觉，教练会马上调整计划。"
+  },
+  "coach_chat_needs_model": {
+    "en": "To write freely, turn on a coach model in Settings.",
+    "zh-Hans": "想自由输入的话，请在设置里打开教练模型。"
+  },
+  "coach_chat_failed": {
+    "en": "I couldn’t answer just now. The quick replies still work.",
+    "zh-Hans": "我暂时没法回答，快捷回复仍然可以用。"
+  },
+  "reveal_full_results": {
+    "en": "Full results",
+    "zh-Hans": "查看完整结果"
+  },
+  "streak_started": {
+    "en": "A streak begins. Practise again tomorrow to keep it going. On a tired day, a rest lesson counts too.",
+    "zh-Hans": "连续练习开始了。明天再练一次就能延续。嗓子累的时候，上一节休息课也算。"
+  },
+  "streak_keep_going": {
+    "en": "Practise again tomorrow to keep it going. On a tired day, a rest lesson counts too.",
+    "zh-Hans": "明天再练一次就能延续。嗓子累的时候，上一节休息课也算。"
+  },
+  "feedback_title": {
+    "en": "Send Feedback",
+    "zh-Hans": "发送反馈"
+  },
+  "feedback_menu": {
+    "en": "Send Feedback…",
+    "zh-Hans": "发送反馈…"
+  },
+  "feedback_placeholder": {
+    "en": "What works, what doesn’t, what you’d like…",
+    "zh-Hans": "哪里好用、哪里不好用、你还想要什么……"
+  },
+  "feedback_footer": {
+    "en": "Continuing opens GitHub, where you post it from your own account. Posts there are public.",
+    "zh-Hans": "继续后会打开 GitHub，由你用自己的账号发布。那里的内容是公开的。"
+  },
+  "feedback_diagnostics": {
+    "en": "Include diagnostics",
+    "zh-Hans": "附带诊断信息"
+  },
+  "feedback_diagnostics_show": {
+    "en": "What’s included",
+    "zh-Hans": "包含哪些内容"
+  },
+  "feedback_diagnostics_footer": {
+    "en": "App and system versions, device model, language and your last few scores, added to your post. Never recordings, never your goal.",
+    "zh-Hans": "App 和系统版本、设备型号、语言和你最近几次的分数，会附在你的帖子里。不含录音，也不含你的声音目标。"
+  },
+  "feedback_send": {
+    "en": "Continue on GitHub",
+    "zh-Hans": "在 GitHub 上继续"
+  },
+  "about_tagline": {
+    "en": "Voice training that listens, right on your device",
+    "zh-Hans": "在你的设备上，倾听并陪你练声"
+  },
+  "about_privacy": {
+    "en": "Your recordings and results stay on your devices and in your own iCloud.",
+    "zh-Hans": "你的录音和结果只保存在你自己的设备和 iCloud 里。"
+  },
+  "about_models_footer": {
+    "en": "Euphona’s own timbre, ease and voice quality models were trained on these public recordings. Everything runs on your device.",
+    "zh-Hans": "Euphona 自己的音色、轻松度和嗓音质量模型用这些公开录音训练而成，全部在你的设备上运行。"
+  },
+  "coach_after_title": {
+    "en": "How does your voice feel now?",
+    "zh-Hans": "现在嗓子感觉怎么样？"
+  },
+  "coach_after_tired": {
+    "en": "Give your voice a break for the rest of today. If it hurts, or stays hoarse for more than a few weeks, see a voice specialist.",
+    "zh-Hans": "今天剩下的时间让嗓子歇一歇。如果疼痛，或者沙哑持续好几周，请去看嗓音专科。"
+  },
+  "analysis_export_chart_f0": {
+    "en": "Pitch curve",
+    "zh-Hans": "音高曲线"
+  },
+  "analysis_failed": {
+    "en": "The analysis didn’t finish",
+    "zh-Hans": "分析没有完成"
+  },
+  "analysis_inference_title": {
+    "en": "Analyze Voice",
+    "zh-Hans": "分析声音"
+  },
+  "analysis_phase_inference": {
+    "en": "Listening to your voice",
+    "zh-Hans": "正在聆听你的声音"
+  },
+  "analysis_phase_models": {
+    "en": "Getting ready",
+    "zh-Hans": "正在准备"
+  },
+  "analysis_recording_minimum": {
+    "en": "5 seconds or more",
+    "zh-Hans": "至少 5 秒"
+  },
+  "analysis_result_title": {
+    "en": "Result",
+    "zh-Hans": "结果"
+  },
+  "app_name": {
+    "en": "Euphona",
+    "zh-Hans": "Euphona"
+  },
+  "click_to_record": {
+    "en": "Tap to start recording",
+    "zh-Hans": "轻点开始录音"
+  },
+  "dashboard_activity_title": {
+    "en": "Activity",
+    "zh-Hans": "活动"
+  },
+  "dashboard_analysis_history": {
+    "en": "All analyses",
+    "zh-Hans": "全部分析"
+  },
+  "dashboard_assessment_count": {
+    "en": "%lld analyses",
+    "zh-Hans": "%lld 次分析"
+  },
+  "dashboard_baseline_average": {
+    "en": "Average %1$@",
+    "zh-Hans": "平均 %1$@"
+  },
+  "dashboard_change_down": {
+    "en": "↓ %1$.0f%%",
+    "zh-Hans": "↓ %1$.0f%%"
+  },
+  "dashboard_change_up": {
+    "en": "↑ %1$.0f%%",
+    "zh-Hans": "↑ %1$.0f%%"
+  },
+  "dashboard_delete": {
+    "en": "Delete",
+    "zh-Hans": "删除"
+  },
+  "dashboard_delete_record": {
+    "en": "Delete Analysis",
+    "zh-Hans": "删除这次分析"
+  },
+  "dashboard_metric_average": {
+    "en": "Average",
+    "zh-Hans": "平均"
+  },
+  "dashboard_metric_chart": {
+    "en": "Trend",
+    "zh-Hans": "趋势"
+  },
+  "dashboard_metric_composite": {
+    "en": "Overall score",
+    "zh-Hans": "综合分"
+  },
+  "dashboard_metric_composite_description": {
+    "en": "The overall score brings timbre, pitch, flow and ease together into one number for your goal.",
+    "zh-Hans": "综合分把音色、音高、流畅度和轻松度合成一个面向你目标的数字。"
+  },
+  "dashboard_metric_daily_best_note": {
+    "en": "Each day shows its best analysis.",
+    "zh-Hans": "每天显示当天最好的一次分析。"
+  },
+  "dashboard_metric_empty_description": {
+    "en": "Analyze your voice a few more times to see a trend.",
+    "zh-Hans": "再多分析几次，就能看到趋势。"
+  },
+  "dashboard_metric_f0": {
+    "en": "Pitch",
+    "zh-Hans": "音高"
+  },
+  "dashboard_metric_latest": {
+    "en": "Latest",
+    "zh-Hans": "最近"
+  },
+  "dashboard_metric_maximum": {
+    "en": "Highest",
+    "zh-Hans": "最高"
+  },
+  "dashboard_metric_minimum": {
+    "en": "Lowest",
+    "zh-Hans": "最低"
+  },
+  "dashboard_metric_pitch_description": {
+    "en": "Your average speaking pitch across the recording.",
+    "zh-Hans": "整段录音里你说话的平均音高。"
+  },
+  "dashboard_metric_standard": {
+    "en": "Timbre",
+    "zh-Hans": "音色"
+  },
+  "dashboard_metric_timbre_description": {
+    "en": "How the color of your voice reads, from its resonance, measured by Euphona’s own model.",
+    "zh-Hans": "由 Euphona 自己的模型根据共鸣判断你的音色听起来偏向哪一边。"
+  },
+  "dashboard_metric_variation": {
+    "en": "Pitch variation",
+    "zh-Hans": "音高变化"
+  },
+  "dashboard_metric_variation_description": {
+    "en": "How much your pitch moves while you speak. More movement sounds livelier; less sounds steadier.",
+    "zh-Hans": "说话时音高起伏的幅度。起伏多听起来更生动，少则更平稳。"
+  },
+  "dashboard_next_month": {
+    "en": "Next Month",
+    "zh-Hans": "下个月"
+  },
+  "dashboard_no_analysis": {
+    "en": "Your analyses will appear here.",
+    "zh-Hans": "你的分析会出现在这里。"
+  },
+  "dashboard_no_recordings": {
+    "en": "Nothing analyzed on this day.",
+    "zh-Hans": "这一天没有分析。"
+  },
+  "dashboard_opened_legend": {
+    "en": "Opened",
+    "zh-Hans": "打开过"
+  },
+  "dashboard_pin_record": {
+    "en": "Pin",
+    "zh-Hans": "置顶"
+  },
+  "dashboard_pinned": {
+    "en": "Pinned",
+    "zh-Hans": "已置顶"
+  },
+  "dashboard_pinned_section": {
+    "en": "Pinned",
+    "zh-Hans": "置顶"
+  },
+  "dashboard_previous_month": {
+    "en": "Previous Month",
+    "zh-Hans": "上个月"
+  },
+  "dashboard_range_30_days": {
+    "en": "30 Days",
+    "zh-Hans": "30 天"
+  },
+  "dashboard_range_7_days": {
+    "en": "7 Days",
+    "zh-Hans": "7 天"
+  },
+  "dashboard_range_90_days": {
+    "en": "90 Days",
+    "zh-Hans": "90 天"
+  },
+  "dashboard_range_all": {
+    "en": "All",
+    "zh-Hans": "全部"
+  },
+  "dashboard_recorded_legend": {
+    "en": "Analyzed",
+    "zh-Hans": "分析过"
+  },
+  "dashboard_unpin_record": {
+    "en": "Unpin",
+    "zh-Hans": "取消置顶"
+  },
+  "error_analysis_failed": {
+    "en": "The recording couldn’t be analyzed.",
+    "zh-Hans": "这段录音没能分析。"
+  },
+  "error_recording_start": {
+    "en": "Recording couldn’t start. Check that Euphona may use the microphone.",
+    "zh-Hans": "无法开始录音。请确认 Euphona 可以使用麦克风。"
+  },
+  "error_speech_duration_short": {
+    "en": "Speak for at least 5 seconds, then try again.",
+    "zh-Hans": "请至少说 5 秒，再试一次。"
+  },
+  "history_detail_error_title": {
+    "en": "This analysis can’t be opened",
+    "zh-Hans": "无法打开这次分析"
+  },
+  "more_piano_description": {
+    "en": "Play notes to find and hold a pitch",
+    "zh-Hans": "弹奏音符，找到并保持音高"
+  },
+  "more_spectrum_description": {
+    "en": "See the frequencies in your voice live",
+    "zh-Hans": "实时查看声音里的频率"
+  },
+  "nav_settings": {
+    "en": "Settings",
+    "zh-Hans": "设置"
+  },
+  "onboarding_preferences_prompt": {
+    "en": "Which direction do you want to train toward?",
+    "zh-Hans": "你想朝哪个方向练习？"
+  },
+  "onboarding_preferences_subtitle": {
+    "en": "This sets what the scores and the coach aim for. You can change it anytime.",
+    "zh-Hans": "这决定评分和教练的目标方向，随时可以更改。"
+  },
+  "onboarding_preferences_title": {
+    "en": "Your Voice Goal",
+    "zh-Hans": "你的声音目标"
+  },
+  "passage_custom_title": {
+    "en": "Your Own Text",
+    "zh-Hans": "自己的文本"
+  },
+  "passage_source_custom": {
+    "en": "Your Own",
+    "zh-Hans": "自定义"
+  },
+  "passage_source_official": {
+    "en": "Built-in",
+    "zh-Hans": "内置"
+  },
+  "pause": {
+    "en": "Pause",
+    "zh-Hans": "暂停"
+  },
+  "piano_subtitle": {
+    "en": "Tap a key to play, hold to sustain",
+    "zh-Hans": "轻点琴键发声，按住延长"
+  },
+  "piano_title": {
+    "en": "Piano",
+    "zh-Hans": "钢琴"
+  },
+  "pitch_accessibility_current": {
+    "en": "Pitch chart, now %1$.0f Hz",
+    "zh-Hans": "音高图，当前 %1$.0f 赫兹"
+  },
+  "pitch_accessibility_waiting": {
+    "en": "Pitch chart, no steady pitch yet",
+    "zh-Hans": "音高图，还没有稳定的音高"
+  },
+  "pitch_average_f0_format": {
+    "en": "Average %1$.0f Hz",
+    "zh-Hans": "平均 %1$.0f Hz"
+  },
+  "pitch_last_page": {
+    "en": "Earlier",
+    "zh-Hans": "更早"
+  },
+  "pitch_no_voice": {
+    "en": "Speak or hum to see your pitch",
+    "zh-Hans": "说话或哼唱，就能看到音高"
+  },
+  "pitch_preparing": {
+    "en": "Getting ready",
+    "zh-Hans": "正在准备"
+  },
+  "pitch_range_invalid": {
+    "en": "The lowest pitch in Settings is above the highest. Change one of them in Advanced settings.",
+    "zh-Hans": "设置里的最低音高高于最高音高，请在高级设置里调整。"
+  },
+  "pitch_resume_analysis": {
+    "en": "Resume",
+    "zh-Hans": "继续"
+  },
+  "pitch_rewind_3": {
+    "en": "Back 3 Seconds",
+    "zh-Hans": "后退 3 秒"
+  },
+  "pitch_rewind_seconds": {
+    "en": "Back %1$.0f Seconds",
+    "zh-Hans": "后退 %1$.0f 秒"
+  },
+  "pitch_start_monitoring": {
+    "en": "Start",
+    "zh-Hans": "开始"
+  },
+  "pitch_stop_monitoring": {
+    "en": "Pause",
+    "zh-Hans": "暂停"
+  },
+  "pitch_title": {
+    "en": "Pitch",
+    "zh-Hans": "音高"
+  },
+  "play": {
+    "en": "Play",
+    "zh-Hans": "播放"
+  },
+  "progress_analyzing_f0": {
+    "en": "Following your pitch",
+    "zh-Hans": "正在追踪音高"
+  },
+  "progress_calculating_scores": {
+    "en": "Putting the scores together",
+    "zh-Hans": "正在合成分数"
+  },
+  "progress_classifying_vfp": {
+    "en": "Reading your timbre",
+    "zh-Hans": "正在判断音色"
+  },
+  "progress_completed": {
+    "en": "Done",
+    "zh-Hans": "完成"
+  },
+  "progress_detecting_speech": {
+    "en": "Finding your speech",
+    "zh-Hans": "正在找出说话的部分"
+  },
+  "progress_extracting_vfp": {
+    "en": "Listening for resonance",
+    "zh-Hans": "正在聆听共鸣"
+  },
+  "record_permission_denied": {
+    "en": "Euphona needs the microphone to hear your voice. Allow it in Settings.",
+    "zh-Hans": "Euphona 需要麦克风才能听到你的声音，请在设置里允许。"
+  },
+  "recording_again": {
+    "en": "Record Again",
+    "zh-Hans": "重新录音"
+  },
+  "score_compare_previous": {
+    "en": "Since last time",
+    "zh-Hans": "与上次相比"
+  },
+  "score_f0_range_note": {
+    "en": "Counted evenly in semitones from 115 to 205 Hz",
+    "zh-Hans": "从 115 到 205 Hz 按半音均匀计算"
+  },
+  "score_f0_range_note_masculine": {
+    "en": "Counted evenly in semitones from 205 down to 115 Hz",
+    "zh-Hans": "从 205 到 115 Hz 按半音均匀计算"
+  },
+  "score_final_score": {
+    "en": "Overall score",
+    "zh-Hans": "综合分"
+  },
+  "score_first_test": {
+    "en": "First analysis",
+    "zh-Hans": "第一次分析"
+  },
+  "score_lowest": {
+    "en": "Lowest",
+    "zh-Hans": "最低"
+  },
+  "score_metrics_toggle": {
+    "en": "Details",
+    "zh-Hans": "详情"
+  },
+  "score_rules_title": {
+    "en": "How It’s Scored",
+    "zh-Hans": "评分方式"
+  },
+  "score_value_not_detected": {
+    "en": "Not found",
+    "zh-Hans": "未检测到"
+  },
+  "score_view_rules": {
+    "en": "How It’s Scored",
+    "zh-Hans": "评分方式"
+  },
+  "settings_about": {
+    "en": "About",
+    "zh-Hans": "关于"
+  },
+  "settings_advanced": {
+    "en": "Advanced",
+    "zh-Hans": "高级"
+  },
+  "settings_advanced_desc": {
+    "en": "Pitch tracking and performance",
+    "zh-Hans": "音高追踪和性能"
+  },
+  "settings_authors": {
+    "en": "Made by",
+    "zh-Hans": "制作"
+  },
+  "settings_f0_chart_curve": {
+    "en": "Curve",
+    "zh-Hans": "曲线"
+  },
+  "settings_f0_chart_dots": {
+    "en": "Dots",
+    "zh-Hans": "点"
+  },
+  "settings_f0_confidence": {
+    "en": "Minimum certainty",
+    "zh-Hans": "最低置信度"
+  },
+  "settings_f0_gap": {
+    "en": "Gap sensitivity",
+    "zh-Hans": "断点灵敏度"
+  },
+  "settings_f0_hz": {
+    "en": "%1$lld Hz",
+    "zh-Hans": "%1$lld Hz"
+  },
+  "settings_f0_max": {
+    "en": "Highest pitch",
+    "zh-Hans": "最高音高"
+  },
+  "settings_f0_min": {
+    "en": "Lowest pitch",
+    "zh-Hans": "最低音高"
+  },
+  "settings_f0_ms": {
+    "en": "%1$lld ms",
+    "zh-Hans": "%1$lld 毫秒"
+  },
+  "settings_f0_rate_value": {
+    "en": "%1$lld per second",
+    "zh-Hans": "每秒 %1$lld 次"
+  },
+  "settings_f0_ratio": {
+    "en": "%1$.2f",
+    "zh-Hans": "%1$.2f"
+  },
+  "settings_f0_reset": {
+    "en": "Restore Defaults",
+    "zh-Hans": "恢复默认"
+  },
+  "settings_f0_sample_rate": {
+    "en": "Pitch readings per second",
+    "zh-Hans": "每秒音高读数"
+  },
+  "settings_f0_title": {
+    "en": "Pitch Tracking",
+    "zh-Hans": "音高追踪"
+  },
+  "settings_language": {
+    "en": "Language",
+    "zh-Hans": "语言"
+  },
+  "settings_open_source": {
+    "en": "Open Source",
+    "zh-Hans": "开源软件"
+  },
+  "settings_passages": {
+    "en": "Reading Texts",
+    "zh-Hans": "朗读文本"
+  },
+  "settings_performance_title": {
+    "en": "Performance",
+    "zh-Hans": "性能"
+  },
+  "settings_theme": {
+    "en": "Theme",
+    "zh-Hans": "主题"
+  },
+  "settings_threads": {
+    "en": "Analysis threads",
+    "zh-Hans": "分析线程"
+  },
+  "settings_title": {
+    "en": "Settings",
+    "zh-Hans": "设置"
+  },
+  "settings_version_format": {
+    "en": "Version %1$@",
+    "zh-Hans": "版本 %1$@"
+  },
+  "settings_voice_goal": {
+    "en": "Voice Goal",
+    "zh-Hans": "声音目标"
+  },
+  "spectrum_accessibility_active": {
+    "en": "Live spectrum, showing %1$.1f seconds",
+    "zh-Hans": "实时频谱，显示 %1$.1f 秒"
+  },
+  "spectrum_accessibility_empty": {
+    "en": "Live spectrum, no sound yet",
+    "zh-Hans": "实时频谱，还没有声音"
+  },
+  "spectrum_last_page": {
+    "en": "Earlier",
+    "zh-Hans": "更早"
+  },
+  "spectrum_no_signal": {
+    "en": "Make a sound to see its spectrum",
+    "zh-Hans": "发出声音，就能看到频谱"
+  },
+  "spectrum_pause": {
+    "en": "Pause",
+    "zh-Hans": "暂停"
+  },
+  "spectrum_preparing": {
+    "en": "Getting ready",
+    "zh-Hans": "正在准备"
+  },
+  "spectrum_resume_analysis": {
+    "en": "Resume",
+    "zh-Hans": "继续"
+  },
+  "spectrum_rewind_5": {
+    "en": "Back 5 Seconds",
+    "zh-Hans": "后退 5 秒"
+  },
+  "spectrum_rewind_seconds": {
+    "en": "Back %1$.0f Seconds",
+    "zh-Hans": "后退 %1$.0f 秒"
+  },
+  "spectrum_start_failed": {
+    "en": "The spectrum couldn’t start.",
+    "zh-Hans": "无法启动频谱。"
+  },
+  "spectrum_start_monitoring": {
+    "en": "Start",
+    "zh-Hans": "开始"
+  },
+  "spectrum_subtitle": {
+    "en": "The frequencies in your voice, live",
+    "zh-Hans": "实时查看声音里的频率"
+  },
+  "spectrum_title": {
+    "en": "Spectrum",
+    "zh-Hans": "频谱"
+  },
+  "start_recording": {
+    "en": "Start Recording",
+    "zh-Hans": "开始录音"
+  },
+  "stop_and_analyze": {
+    "en": "Stop and Analyze",
+    "zh-Hans": "停止并分析"
+  },
+  "theme_amber": {
+    "en": "Amber",
+    "zh-Hans": "琥珀"
+  },
+  "theme_coral": {
+    "en": "Coral",
+    "zh-Hans": "珊瑚"
+  },
+  "theme_forest": {
+    "en": "Forest",
+    "zh-Hans": "森林"
+  },
+  "theme_indigo": {
+    "en": "Indigo",
+    "zh-Hans": "靛蓝"
+  },
+  "theme_ocean": {
+    "en": "Sea Glass",
+    "zh-Hans": "海玻璃"
+  },
+  "theme_rose": {
+    "en": "Rose",
+    "zh-Hans": "玫瑰"
+  },
+  "timeline_f0_value": {
+    "en": "%1$.0f Hz",
+    "zh-Hans": "%1$.0f Hz"
+  },
+  "timeline_standard_value": {
+    "en": "T %1$@",
+    "zh-Hans": "音色 %1$@"
+  },
+  "voice_capture_progress": {
+    "en": "%1$.1f of %2$.1f s",
+    "zh-Hans": "%1$.1f / %2$.1f 秒"
+  },
+  "voice_health_metric_cpps": {
+    "en": "CPPS",
+    "zh-Hans": "CPPS"
+  },
+  "voice_health_metric_f0": {
+    "en": "Median pitch",
+    "zh-Hans": "中位音高"
+  },
+  "voice_health_metric_hnr": {
+    "en": "HNR",
+    "zh-Hans": "谐噪比"
+  },
+  "voice_health_metric_intensity": {
+    "en": "Median level",
+    "zh-Hans": "中位音量"
+  },
+  "voice_health_metric_jitter": {
+    "en": "Jitter",
+    "zh-Hans": "频率微扰"
+  },
+  "voice_health_metric_shimmer": {
+    "en": "Shimmer",
+    "zh-Hans": "振幅微扰"
+  },
+  "voice_health_stage_extracting": {
+    "en": "Measuring your voice",
+    "zh-Hans": "正在测量你的声音"
+  },
+  "voice_profile_feminine_description": {
+    "en": "A lighter, brighter sound",
+    "zh-Hans": "更轻盈、更明亮的声音"
+  },
+  "voice_profile_feminine_title": {
+    "en": "More Feminine",
+    "zh-Hans": "更女性化"
+  },
+  "voice_profile_masculine_description": {
+    "en": "A deeper, fuller sound",
+    "zh-Hans": "更低沉、更饱满的声音"
+  },
+  "voice_profile_masculine_title": {
+    "en": "More Masculine",
+    "zh-Hans": "更男性化"
+  },
+  "reading_passage_titles_1": {
+    "en": "The Morning Market",
+    "zh-Hans": "早市"
+  },
+  "reading_passage_texts_1": {
+    "en": "Every Saturday the square fills with stalls before the sun is fully up. A woman sells peaches so ripe you can smell them from the corner, and the man beside her stacks loaves of warm bread into careful towers. Children weave between the tables while their parents argue gently over the price of tomatoes. Someone is always playing music near the fountain, never quite the same song as last week. By noon the crowd thins, the awnings fold away, and only the pigeons stay behind, searching the stones for crumbs. Then the square is quiet again, waiting for next Saturday.",
+    "zh-Hans": "每到周六，太阳还没完全升起，广场上就已经摆满了摊位。一位阿姨卖的桃子熟得刚好，在街角就能闻到香味；旁边的大叔把刚出炉的面包小心地码成一座座小塔。孩子们在桌子之间钻来钻去，大人们为西红柿的价钱轻声讨价还价。喷泉旁总有人在演奏，曲子从来不和上周一样。到了中午，人渐渐散去，遮阳棚一个个收起，只剩鸽子留在石板上找面包屑。广场又安静下来，等着下一个周六。"
+  },
+  "reading_passage_titles_2": {
+    "en": "The Lighthouse",
+    "zh-Hans": "灯塔"
+  },
+  "reading_passage_texts_2": {
+    "en": "On a rocky island at the edge of the bay stands an old white lighthouse. For more than a hundred years its lamp has turned through the night, sweeping a long beam across the water. Sailors far out at sea count the flashes to know exactly where they are. The keeper who once lived there climbed the spiral stairs every evening, cleaned the glass, and wound the clock that turned the light. Today the lamp runs on its own, but people still row out on calm summer days, sit on the warm rocks, and listen to the waves.",
+    "zh-Hans": "海湾尽头的一座岩石小岛上，立着一座白色的老灯塔。一百多年来，它的灯整夜旋转，把长长的光束扫过海面。远在海上的水手数着闪光的次数，就能知道自己身在何处。曾经住在这里的守塔人每天傍晚都要爬上螺旋楼梯，擦亮玻璃，给带动灯光的钟上好发条。如今灯已经能自己运转，可在风平浪静的夏日，仍有人划船过来，坐在温暖的岩石上听海浪的声音。"
+  },
+  "reading_passage_titles_3": {
+    "en": "Learning to Swim",
+    "zh-Hans": "学游泳"
+  },
+  "reading_passage_texts_3": {
+    "en": "I learned to swim late, the summer I turned thirty. At first I held my breath the whole time and fought the water with every stroke. My teacher laughed and told me the water was not my enemy. Lie back, she said, and let it carry you. It took weeks before I believed her. Then one morning I stopped fighting, my legs rose, and I simply floated, looking up at the clouds. Since then I have swum in lakes, rivers and the sea, and each time I remember that the trick was not effort but trust.",
+    "zh-Hans": "我学游泳学得很晚，是在三十岁那年夏天。一开始我全程憋着气，每划一下都在和水较劲。教练笑着说，水不是你的敌人，躺下来，让它托着你。我花了好几个星期才相信她。直到有一天早上，我不再挣扎，双腿浮了起来，我就那样漂着，望着天上的云。从那以后，我在湖里、河里和海里都游过，每次都会想起，诀窍不是用力，而是信任。"
+  },
+  "reading_passage_titles_4": {
+    "en": "Bread at Home",
+    "zh-Hans": "在家做面包"
+  },
+  "reading_passage_texts_4": {
+    "en": "Making bread is mostly waiting. You mix flour, water, salt and a little yeast, then knead the dough until it turns smooth and springs back when you press it. After that there is nothing to do but cover the bowl and let it rise somewhere warm. An hour later the dough has doubled, soft and full of air. You shape it, let it rest once more, and slide it into a hot oven. Soon the whole kitchen smells of crust, and the hardest part of the recipe is letting the loaf cool before you cut it.",
+    "zh-Hans": "做面包大部分时间都在等待。把面粉、水、盐和一点酵母混在一起，揉到面团变得光滑，按下去会慢慢弹回来。之后就只需要盖上碗，放在温暖的地方让它发酵。一个小时后，面团胖了一倍，柔软又充满空气。把它整形，再静置一会儿，然后送进烧热的烤箱。很快，整个厨房都飘着面包皮的香味，而整个过程中最难的，是等面包放凉再切。"
+  },
+  "reading_passage_titles_5": {
+    "en": "The Night Train",
+    "zh-Hans": "夜车"
+  },
+  "reading_passage_texts_5": {
+    "en": "The night train leaves the city a little before ten. Through the window the streetlights thin out, then vanish, and the fields turn silver under the moon. In the dining car a few travelers share tea and quiet stories. Most of the passengers sleep, rocked by the steady rhythm of the wheels. Sometimes the train slows at a small station where a single lamp shines on an empty platform, and a conductor waves a lantern. By morning the mountains appear, pink in the first light, and someone opens a window to let in the cold, clean air.",
+    "zh-Hans": "夜车在十点前不久驶离城市。窗外的路灯越来越稀，最后消失不见，田野在月光下泛着银光。餐车里，几位旅客分享着热茶和轻声的故事。大多数乘客已经睡去，随着车轮平稳的节奏轻轻摇晃。有时火车在小站减速，一盏孤灯照着空荡的站台，列车员挥动手里的提灯。天亮时，群山出现在眼前，被第一缕阳光染成粉色，有人打开车窗，让清冷干净的空气吹进来。"
+  },
+  "reading_passage_titles_6": {
+    "en": "A Letter to Myself",
+    "zh-Hans": "写给自己的信"
+  },
+  "reading_passage_texts_6": {
+    "en": "Some years ago I wrote a letter to myself and sealed it in a drawer, to be opened on a day when things felt hard. I forgot about it until last winter. The handwriting was hurried and the advice was simple: drink some water, step outside, call someone you love, and remember that you have been through difficult weeks before. Reading it, I laughed, because it was exactly what I needed. I have written a new one now. I do not know when I will open it, but I trust that whoever I am by then will be glad it is there.",
+    "zh-Hans": "几年前，我给自己写了一封信，封好放进抽屉，打算在难熬的日子里打开。后来我就忘了它，直到去年冬天。信上的字写得很急，建议也很简单：喝点水，出去走走，给你爱的人打个电话，记住你以前也熬过不容易的日子。读着读着我笑了，因为那正是我需要的。现在我又写了一封新的。我不知道什么时候会打开它，但我相信，到那时的我会很高兴它在那里。"
+  },
+  "coach_answer_no_harder": {
+    "en": "%@ is already at the highest level for today. Two passes there move you on.",
+    "zh-Hans": "%@今天已经是最高的一级了。在这一级通过两次，就会继续往前走。"
+  },
+  "coach_answer_no_easier": {
+    "en": "%@ is already at its gentlest level. Take it slowly; that counts too.",
+    "zh-Hans": "%@已经是最轻松的一级了。慢慢来，这也算进步。"
+  },
+  "coach_answer_no_change": {
+    "en": "Today’s lesson already works that way, so nothing needed to change.",
+    "zh-Hans": "今天的课程已经是这样安排的，不需要再改。"
+  },
+  "coach_first_analysis_title": {
+    "en": "Start with one analysis",
+    "zh-Hans": "先做一次分析"
+  },
+  "coach_first_analysis_body": {
+    "en": "Every target is set from your own voice. Read a short passage once, and your first lesson appears here.",
+    "zh-Hans": "每个目标都根据你自己的声音来定。先朗读一小段，第一节课就会出现在这里。"
+  },
+  "share_title": {
+    "en": "Share",
+    "zh-Hans": "分享"
+  },
+  "share_as_image": {
+    "en": "Share as Image",
+    "zh-Hans": "以图片分享"
+  },
+  "share_as_pdf": {
+    "en": "Share as PDF",
+    "zh-Hans": "以 PDF 分享"
+  },
+  "save_as_image": {
+    "en": "Save as Image…",
+    "zh-Hans": "存储为图片…"
+  },
+  "save_as_pdf": {
+    "en": "Save as PDF…",
+    "zh-Hans": "存储为 PDF…"
+  },
+  "report_analysis_title": {
+    "en": "Voice Analysis",
+    "zh-Hans": "声音分析"
+  },
+  "report_footer": {
+    "en": "Analyzed on device by Euphona",
+    "zh-Hans": "由 Euphona 在设备上分析"
+  },
+  "report_page": {
+    "en": "Page %1$lld of %2$lld",
+    "zh-Hans": "第 %1$lld 页，共 %2$lld 页"
+  },
+  "report_column_date": {
+    "en": "Date",
+    "zh-Hans": "日期"
+  },
+  "report_column_length": {
+    "en": "Length",
+    "zh-Hans": "时长"
+  },
+  "error_export_failed": {
+    "en": "The file couldn’t be saved",
+    "zh-Hans": "文件没能存储"
+  },
+  "analysis_import_audio": {
+    "en": "Import Audio",
+    "zh-Hans": "导入音频"
+  },
+  "error_unreadable_file": {
+    "en": "This file can’t be read. Choose an audio or video file with speech in it.",
+    "zh-Hans": "无法读取这个文件。请选择一个有说话声的音频或视频文件。"
+  },
+  "score_component_flow": {
+    "en": "Flow",
+    "zh-Hans": "流畅度"
+  },
+  "score_component_ease": {
+    "en": "Ease",
+    "zh-Hans": "轻松度"
+  },
+  "score_component_flow_measures": {
+    "en": "%1$@ syllables per second, %2$@ pauses",
+    "zh-Hans": "每秒 %1$@ 个音节，停顿占 %2$@"
+  },
+  "score_focus_flow_title": {
+    "en": "Flow costs a few points",
+    "zh-Hans": "流畅度扣了一些分"
+  },
+  "score_focus_flow": {
+    "en": "Keep an even pace: read at your own speed and pause where the text does, without long stops or rushing. A slow, calm style costs nothing.",
+    "zh-Hans": "保持均匀的节奏：按自己的语速朗读，在文字该停的地方停一下，不要长时间停顿，也不要赶。慢而平稳的风格不扣分。"
+  },
+  "score_focus_ease_title": {
+    "en": "Ease costs a few points",
+    "zh-Hans": "轻松度扣了一些分"
+  },
+  "score_focus_ease": {
+    "en": "Your voice sounds a little pressed. Ease off: more breath, less push, a softer start to each phrase. If it hurts or stays hoarse, rest.",
+    "zh-Hans": "声音听起来有点用力。放松一点：多用气息、少用力推，每句话的开头轻一些。如果嗓子疼或一直沙哑，就先休息。"
+  },
+  "dashboard_metric_flow": {
+    "en": "Flow",
+    "zh-Hans": "流畅度"
+  },
+  "dashboard_metric_flow_description": {
+    "en": "How evenly you speak: your pace and your pauses. A slow, calm style costs nothing; only rushing or long stops do.",
+    "zh-Hans": "说话有多均匀：语速和停顿。慢而平稳的风格不扣分，只有赶得太快或长时间停顿才会。"
+  },
+  "dashboard_metric_ease": {
+    "en": "Ease",
+    "zh-Hans": "轻松度"
+  },
+  "dashboard_metric_ease_description": {
+    "en": "How unforced your voice sounds: 100 means no more strain than healthy speakers show. Estimated from recordings that voice clinicians rated for strain.",
+    "zh-Hans": "声音听起来有多不费力：100 表示不比健康的说话者更用力。根据嗓音专业人士评过用力程度的录音估算。"
+  },
+  "progress_scoring_flow": {
+    "en": "Checking flow and ease",
+    "zh-Hans": "正在评估流畅度和轻松度"
+  },
+  "coach_value_flow": {
+    "en": "flow %@",
+    "zh-Hans": "流畅度 %@"
+  }
+}
