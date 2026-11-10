@@ -2,7 +2,7 @@
 
 What changes in each version, for people using the app.
 
-## Unreleased
+## 1.0.0
 
 The first version of Euphona for iPhone, iPad and Mac.
 
