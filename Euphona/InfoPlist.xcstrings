@@ -1,0 +1,227 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CFBundleName" : {
+      "comment" : "Bundle name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Euphona"
+          }
+        }
+      }
+    },
+    "NSMicrophoneUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يستمع Euphona إلى صوتك لقياس كيف يبدو. يجري التحليل على جهازك."
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona escolta la teva veu per mesurar com sona. L’anàlisi es fa al dispositiu."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona poslouchá váš hlas, aby změřila, jak zní. Analýza probíhá přímo ve vašem zařízení."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona lytter til din stemme for at måle, hvordan den lyder. Analysen foregår på din enhed."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona hört auf deine Stimme, um zu messen, wie sie klingt. Die Analyse läuft auf deinem Gerät."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Το Euphona ακούει τη φωνή σας για να μετρήσει πώς ακούγεται. Η ανάλυση γίνεται στη συσκευή σας."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona listens to your voice to measure how it sounds. The analysis runs on your device."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona escucha tu voz para medir cómo suena. El análisis se hace en tu dispositivo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona kuuntelee ääntäsi mitatakseen, miltä se kuulostaa. Analyysi tehdään laitteellasi."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona écoute votre voix pour mesurer comment elle sonne. L’analyse se fait sur votre appareil."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona מאזינה לקול שלך כדי למדוד איך הוא נשמע. הניתוח מתבצע במכשיר שלך."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona आपकी आवाज़ कैसी सुनाई देती है, यह मापने के लिए उसे सुनता है। विश्लेषण आपके डिवाइस पर होता है।"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona sluša vaš glas kako bi izmjerila kako zvuči. Analiza se odvija na vašem uređaju."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Az Euphona a hangodat hallgatja, hogy megmérje, hogyan szól. Az elemzés az eszközödön fut."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona mendengarkan suara Anda untuk mengukur bagaimana kedengarannya. Analisis berjalan di perangkat Anda."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona ascolta la tua voce per misurare come suona. L’analisi avviene sul tuo dispositivo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona はあなたの声がどう聞こえるかを測るために声を聞きます。分析はデバイス上で行われます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona는 목소리가 어떻게 들리는지 측정하기 위해 목소리를 듣습니다. 분석은 기기에서 이루어집니다."
+          }
+        },
+        "ms" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona mendengar suara anda untuk mengukur bagaimana bunyinya. Analisis berjalan pada peranti anda."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona lytter til stemmen din for å måle hvordan den høres ut. Analysen skjer på enheten din."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona luistert naar je stem om te meten hoe die klinkt. De analyse gebeurt op je apparaat."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona słucha Twojego głosu, aby zmierzyć, jak brzmi. Analiza odbywa się na Twoim urządzeniu."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Euphona ouve sua voz para medir como ela soa. A análise é feita no seu dispositivo."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona îți ascultă vocea pentru a măsura cum sună. Analiza se face pe dispozitivul tău."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona слушает ваш голос, чтобы оценить, как он звучит. Анализ выполняется на вашем устройстве."
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona počúva váš hlas, aby zmerala, ako znie. Analýza prebieha priamo vo vašom zariadení."
+          }
+        },
+        "sl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona posluša vaš glas, da izmeri, kako zveni. Analiza poteka v vaši napravi."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona lyssnar på din röst för att mäta hur den låter. Analysen görs på din enhet."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona ฟังเสียงของคุณเพื่อวัดว่าฟังดูเป็นอย่างไร การวิเคราะห์ทำงานบนอุปกรณ์ของคุณ"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona, sesinizin nasıl duyulduğunu ölçmek için sesinizi dinler. Analiz cihazınızda çalışır."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona слухає ваш голос, щоб оцінити, як він звучить. Аналіз виконується на вашому пристрої."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona lắng nghe giọng của bạn để đo giọng nghe như thế nào. Việc phân tích diễn ra trên thiết bị của bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona 需要聆听你的声音来分析它听起来怎样。分析在你的设备上完成。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euphona 需要聆聽你的聲音來分析它聽起來怎樣。分析在你的裝置上完成。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

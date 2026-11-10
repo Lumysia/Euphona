@@ -1,0 +1,22 @@
+[project]
+name = "euphona-voice-model"
+version = "0.1.0"
+description = "Training and evaluation of Euphona's timbre, ease and voice quality models"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5",
+    "onnxruntime>=1.31",
+    "soundfile>=0.14",
+    "scipy>=1.18",
+    "torch>=2.15.0",
+    "torchaudio>=2.11.1",
+    "speechbrain>=1.1.2",
+    "scikit-learn>=1.9.1",
+    "pyworld>=0.3.5",
+    "pyarrow>=26.0.1",
+    "setuptools<81",
+    "onnx>=1.23.2",
+]
+
+[tool.uv]
+package = false

@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  pull_request:
+    paths-ignore: ["**.md", "docs/**", "LICENSE"]
+  push:
+    branches: [main]
+    paths-ignore: ["**.md", "docs/**", "LICENSE"]
+  # By hand, for a run the path filter can't decide (a push that replaces history).
+  workflow_dispatch:
+
+# A newer push to the same branch or pull request cancels the older run.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_27.2.app/Contents/Developer
+
+jobs:
+  package:
+    name: EuphonaKit tests
+    runs-on: xcode-27
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/cache@v6
+        with:
+          path: Packages/EuphonaKit/.build/artifacts
+          key: spm-artifacts-${{ hashFiles('Packages/EuphonaKit/Package.swift') }}
+      - name: Test
+        working-directory: Packages/EuphonaKit
+        run: swift test
+
+  app:
+    name: App (${{ matrix.platform }})
+    runs-on: xcode-27
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: iOS
+            destination: generic/platform=iOS Simulator
+          - platform: macOS
+            destination: generic/platform=macOS
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/cache@v6
+        with:
+          path: build/SourcePackages/artifacts
+          key: xcode-artifacts-${{ hashFiles('Packages/EuphonaKit/Package.swift') }}
+      - name: Build
+        run: tools/ci/build.sh "${{ matrix.destination }}"
+
+  ui:
+    name: Navigation UI test
+    runs-on: xcode-27
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/cache@v6
+        with:
+          path: build/SourcePackages/artifacts
+          key: xcode-artifacts-${{ hashFiles('Packages/EuphonaKit/Package.swift') }}
+      - name: Test
+        run: |
+          set -o pipefail
+          xcodebuild test -project Euphona.xcodeproj -scheme Euphona \
+            -destination "platform=iOS Simulator,name=iPhone 17,OS=27.2" \
+            -derivedDataPath build -only-testing:EuphonaUITests \
+            | xcbeautify --renderer github-actions
