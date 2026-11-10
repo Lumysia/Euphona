@@ -26,6 +26,12 @@ xcodebuild archive \
   "${auth[@]}" \
   | xcbeautify --renderer github-actions
 
+# ONNX Runtime ships a static library wrapped as a .framework. It is already linked into the app
+# binary, but Xcode still copies the bundle into the app, and App Store Connect rejects that copy
+# (ITMS-90208). Export re-signs the app, so removing it here is safe.
+app="$work/Euphona.xcarchive/Products/Applications/Euphona.app"
+rm -rf "$app/Frameworks/onnxruntime.framework" "$app/Contents/Frameworks/onnxruntime.framework"
+
 xcodebuild -exportArchive \
   -archivePath "$work/Euphona.xcarchive" \
   -exportOptionsPlist tools/ci/ExportOptions.plist \

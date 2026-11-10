@@ -15,6 +15,8 @@ The technical choices behind the app, each with its reason. What the app should 
   twice as fast but used 0.9 GB more memory and about 5 s to prepare; to be measured again on iPhones.
 - **ONNX Runtime's usage telemetry is switched off before the engine starts** (`CEuphonaApple`), so
   "no tracking" is a guarantee rather than an observation.
+- **The release upload removes the embedded copy of `onnxruntime.framework`** (`tools/ci/upload.sh`).
+  It is a static library already linked into the app, and App Store Connect rejects the copy Xcode adds.
 - **One result schema, in Swift names** (`EuphonaResult`): timbre is a `ScoreTrack` (overall score plus
   per-window scores); flow and ease judge the whole recording, so they are single values (flow with
   the pace and pause share it came from); fields nobody reads are not stored, and the JSON
