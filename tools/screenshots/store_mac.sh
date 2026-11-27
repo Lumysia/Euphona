@@ -12,6 +12,18 @@ AUDIO="$ROOT/Packages/EuphonaKit/Tests/EuphonaKitTests/Fixtures"
 OUT="$ROOT/.build/shots/mac-$LANGUAGE"
 RAW="$OUT/raw"
 mkdir -p "$RAW"
+# Use the sharpest display mode the machine offers: a HiDPI mode gives 2x captures for the 2880x1800
+# canvas, otherwise the largest mode keeps the window at its full default size.
+if command -v displayplacer >/dev/null || brew install -q jakehilborn/jakehilborn/displayplacer >/dev/null 2>&1; then
+  mode=$(displayplacer list | python3 -c "import re, sys
+text = sys.stdin.read()
+screen = re.search(r'Persistent screen id: (\S+)', text).group(1)
+modes = [(int(n), int(w), 'scaling:on' in line) for line, n, w in re.findall(r'(mode (\d+): res:(\d+)x\d+[^\n]*)', text)]
+number, _, _ = max(modes, key=lambda m: (m[2] and m[1] >= 1440, m[1]))
+print(f'id:{screen} mode:{number}')" 2>/dev/null) && displayplacer "$mode" || true
+fi
+system_profiler SPDisplaysDataType | grep -E 'Resolution|UI Looks like' || true
+
 defaults delete net.lumysia.Euphona 2>/dev/null || true
 rm -rf ~/Library/Containers/net.lumysia.Euphona "$HOME/Library/Application Support/default.store"*
 
