@@ -1,0 +1,118 @@
+name: Screenshots
+
+# By hand, before an App Store submission: screenshots of the debug build with demo history on the
+# iPhone, iPad and Mac sizes App Store Connect asks for, in every app language (or the ones given),
+# uploaded as one artifact per platform and language group.
+on:
+  workflow_dispatch:
+    inputs:
+      languages:
+        description: App languages, space-separated (empty for every language the app ships)
+        required: false
+        default: ""
+
+concurrency:
+  group: screenshots-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_27.2.app/Contents/Developer
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      groups: ${{ steps.groups.outputs.groups }}
+    steps:
+      - uses: actions/checkout@v7
+      - id: groups
+        env:
+          LANGUAGES: ${{ inputs.languages }}
+        # Four languages per job: a job boots each simulator once, since a boot takes longer than a
+        # language's shots, and stays well inside its time limit.
+        run: |
+          if [ -z "$LANGUAGES" ]; then
+            LANGUAGES="en zh-Hans $(basename -s .json tools/strings/translations/*.json | tr '\n' ' ')"
+          fi
+          groups=$(echo "$LANGUAGES" | jq -Rc '[splits(" +") | select(. != "")] | [range(0; length; 4) as $i | .[$i:$i + 4] | join(" ")]')
+          echo "groups=$groups" >> "$GITHUB_OUTPUT"
+
+  build:
+    name: Build (${{ matrix.platform }})
+    runs-on: xcode-27
+    timeout-minutes: 40
+    strategy:
+      matrix:
+        include:
+          - platform: iOS
+            destination: generic/platform=iOS Simulator
+            products: Debug-iphonesimulator
+          # Ad hoc signed without entitlements: no sandbox, so the demo clips in the checkout can be read.
+          - platform: macOS
+            destination: generic/platform=macOS
+            products: Debug
+            signing: CODE_SIGN_IDENTITY=- CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM= CODE_SIGN_ENTITLEMENTS= ENABLE_APP_SANDBOX=NO
+    steps:
+      - uses: actions/checkout@v7
+      # The same cache as CI, so the ONNX Runtime download is shared.
+      - uses: actions/cache@v6
+        with:
+          path: build/SourcePackages/artifacts
+          key: xcode-artifacts-${{ hashFiles('Packages/EuphonaKit/Package.swift') }}
+      - name: Build
+        env:
+          DESTINATION: ${{ matrix.destination }}
+          SIGNING: ${{ matrix.signing }}
+        run: |
+          set -o pipefail
+          # shellcheck disable=SC2086
+          xcodebuild build -project Euphona.xcodeproj -scheme Euphona -configuration Debug \
+            -destination "$DESTINATION" -derivedDataPath build $SIGNING \
+            | xcbeautify --renderer github-actions
+          tar -C "build/Build/Products/${{ matrix.products }}" -cf "$RUNNER_TEMP/app.tar" Euphona.app
+      - uses: actions/upload-artifact@v7
+        with:
+          name: app-${{ matrix.platform }}
+          path: ${{ runner.temp }}/app.tar
+          retention-days: 1
+
+  shots:
+    name: Shots (${{ matrix.platform }}, ${{ matrix.languages }})
+    needs: [plan, build]
+    runs-on: xcode-27
+    timeout-minutes: 100
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [iOS, macOS]
+        languages: ${{ fromJSON(needs.plan.outputs.groups) }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          name: app-${{ matrix.platform }}
+          path: ${{ runner.temp }}
+      - name: Capture
+        env:
+          PLATFORM: ${{ matrix.platform }}
+          LANGUAGES: ${{ matrix.languages }}
+        run: |
+          if [ "$PLATFORM" = iOS ]; then products=Debug-iphonesimulator; else products=Debug; fi
+          mkdir -p ".build/DerivedData/Build/Products/$products"
+          tar -C ".build/DerivedData/Build/Products/$products" -xf "$RUNNER_TEMP/app.tar"
+          if [ "$PLATFORM" = iOS ]; then
+            # shellcheck disable=SC2086
+            tools/screenshots/store.sh $LANGUAGES
+          else
+            for language in $LANGUAGES; do tools/screenshots/store_mac.sh "$language"; done
+          fi
+          find .build/shots -name raw -type d -prune -exec rm -rf {} +
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: shots-${{ matrix.platform }}-${{ strategy.job-index }}
+          path: .build/shots
+          retention-days: 7

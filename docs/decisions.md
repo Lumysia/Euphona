@@ -250,7 +250,11 @@ The technical choices behind the app, each with its reason. What the app should 
 - **Debug builds can open any screen with real sample analyses** (`-demo_audio <folder>`,
   `-demo_screen <name>`). `tools/screenshots/capture.sh` uses this to screenshot every screen, in light
   or dark mode. On Mac, `tools/screenshots/capture_mac.sh` captures each window without seeding demo
-  data, because the Mac store is the person's real, iCloud-synced history.
+  data, because the Mac store is the person's real, iCloud-synced history. The demo history fills the
+  steps between the two sample clips with summary-only records, so trends climb over several weeks.
+- **App Store screenshots are made in CI** (Screenshots workflow): a runner Mac has no history, so
+  `store_mac.sh` may seed demo data there; the status bar is Apple's 9:41, and an iPhone shot is retaken
+  while the system's audio indicator has the Dynamic Island open.
 - **The Mac Settings window uses the standard toolbar tabs** (General, Advanced, About), each sized to
   its content; iPhone and iPad keep the list with pushed pages. Mac forms label on the left and use
   radio groups and right-aligned buttons; sliders snap through their binding instead of `step:`, which

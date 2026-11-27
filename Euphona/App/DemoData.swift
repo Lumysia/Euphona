@@ -44,13 +44,31 @@ enum DemoData {
                                                       audioFormat: AudioEncoder.fileExtension) else { continue }
             added.append(record)
         }
-        // Dated in order of score, so the demo history climbs the way practice should.
-        for (index, record) in added.sorted(by: { $0.finalScore < $1.finalScore }).enumerated() {
-            let daysAgo = (added.count - index) * 2
-            record.date = calendar.date(byAdding: .day, value: -daysAgo, to: .now)!.addingTimeInterval(Double(index) * 1800)
+        // Dated in order of score, with steps between the lowest and highest clip, so the demo history
+        // climbs over several weeks the way practice should. The newest analysis is from this morning, or
+        // from yesterday evening before then.
+        let sorted = added.sorted { $0.finalScore < $1.finalScore }
+        var climb = sorted
+        if let low = sorted.first, let high = sorted.last, sorted.count > 1 {
+            let steps = (1...climbSteps).compactMap { step(from: low, to: high, at: Double($0) / Double(climbSteps + 1)) }
+            for step in steps { context.insert(step) }
+            climb = [low] + steps + sorted.dropFirst()
+        }
+        let morning = calendar.date(bySettingHour: 9, minute: 12, second: 0, of: .now)!
+        let newest = morning < .now ? morning : calendar.date(byAdding: .hour, value: -15, to: morning)!
+        for (index, record) in climb.enumerated() {
+            let daysAgo = (climb.count - 1 - index) * 3
+            record.date = calendar.date(byAdding: .day, value: -daysAgo, to: newest)!.addingTimeInterval(-Double(index % 4) * 2700)
         }
         try? context.save()
-        for daysAgo in 0..<20 where daysAgo % 3 != 1 {
+        // A short pitch practice on each of the last twelve days, so the streak shows a habit.
+        let latestF0 = sorted.last?.speakingF0Hz ?? 200
+        for daysAgo in 0..<12 {
+            let date = calendar.date(byAdding: .day, value: -daysAgo, to: newest)!.addingTimeInterval(-1800)
+            try? store.addPitchSession(meanF0Hz: latestF0 - Double(daysAgo) * 1.5, date: date)
+        }
+        // A practice streak of the last two weeks, with a few missed days before it.
+        for daysAgo in 0..<40 where daysAgo < 14 || daysAgo % 3 != 1 {
             try? store.recordOpenedDay(calendar.date(byAdding: .day, value: -daysAgo, to: .now)!)
         }
         // A short conversation with the coach, ending in a quick reply.
@@ -60,6 +78,27 @@ enum DemoData {
         try? store.addNote("Of course. Today’s lesson works on resonance, starting from the bright “ee” you already reach.", date: hour(3))
         let records = (try? context.fetch(FetchDescriptor<AnalysisRecord>(sortBy: [SortDescriptor(\.date, order: .reverse)]))) ?? []
         try? QuickReply.tooEasy.send(store: store, plan: CoachPlan(goal: settings.voiceGoal, records: records, attempts: [], requests: []))
+    }
+
+    private static let climbSteps = 12
+
+    /// A summary-only analysis part of the way (`t`, 0...1) from `low` to `high`, eased so early
+    /// practice gains the most, with a small wobble so the line looks like real practice, and always
+    /// short of `high`, so the real analysis stays the latest step up. It has no
+    /// stored result, so rescoring at launch keeps its numbers.
+    private static func step(from low: AnalysisRecord, to high: AnalysisRecord, at t: Double) -> AnalysisRecord? {
+        guard let base = low.result else { return nil }
+        let eased = min(0.95, max(0, 1 - pow(1 - t, 1.6) + sin(t * 23) * 0.035))
+        func mix(_ a: Double, _ b: Double) -> Double { a + (b - a) * eased }
+        let record = AnalysisRecord(result: base, audio: nil, audioFormat: nil)
+        record.resultJSON = nil
+        record.finalScore = mix(low.finalScore, high.finalScore)
+        record.timbreScore = mix(low.timbreScore, high.timbreScore)
+        record.flowScore = mix(low.flowScore, high.flowScore)
+        record.easeScore = mix(low.easeScore, high.easeScore)
+        if let a = low.speakingF0Hz, let b = high.speakingF0Hz { record.speakingF0Hz = mix(a, b) }
+        if let a = low.f0VariationHz, let b = high.f0VariationHz { record.f0VariationHz = mix(a, b) }
+        return record
     }
 }
 
