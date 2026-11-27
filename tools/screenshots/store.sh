@@ -29,17 +29,13 @@ d = json.load(sys.stdin)['devices']
 print([x['udid'] for r in d for x in d[r] if x['name'] == sys.argv[1]][0])" "$1"
 }
 
-# Boot every device once; capture.sh leaves a simulator it did not boot running.
-UDIDS=()
+# One simulator at a time, booted once for every language: two large simulators side by side exhaust a
+# CI runner's memory, and a boot takes longer than a language's shots.
 for device in "${DEVICES[@]}"; do
   udid=$(device_udid "$device")
-  UDIDS+=("$udid")
   xcrun simctl boot "$udid" 2>/dev/null || true
-done
-trap 'for udid in "${UDIDS[@]}"; do xcrun simctl shutdown "$udid" 2>/dev/null || true; done' EXIT
-
-for language in "$@"; do
-  for device in "${DEVICES[@]}"; do
+  for language in "$@"; do
     LANGUAGE=$language "$ROOT/tools/screenshots/capture.sh" "$device"
   done
+  xcrun simctl shutdown "$udid"
 done
