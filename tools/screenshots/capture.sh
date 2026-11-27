@@ -56,8 +56,11 @@ shot() {
   echo "$(date +%T) $OUT/$name.png"
 }
 
+# The first launch seeds the demo history; Today is shot again at the end, when a slow machine has
+# surely finished seeding.
 WAIT=25 shot today
 for screen in ${SCREENS:-practice progress coach lesson lesson-intro analysis result rules pitch timbre resonance spectrum piano quality settings history}; do
   shot "$screen" -demo_screen "$screen"
 done
+shot today
 xcrun simctl ui "$UDID" appearance light
