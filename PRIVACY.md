@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Effective November 10, 2026.
+Effective November 27, 2026.
 
 Euphona is built so that your voice stays yours. This policy explains what the app does with your
 information on iPhone, iPad and Mac.
@@ -17,8 +17,10 @@ information on iPhone, iPad and Mac.
 - **Recordings and results.** When you analyze your voice, the recording, its results and your
   progress are stored on your device. Euphona's own models analyze them there.
 - **Coach.** Lessons, your practice tries, your check-ins and your conversation with the coach are
-  stored on your device. The coach's language model is Apple Intelligence on your device; Euphona does
-  not send your conversation to us.
+  stored on your device. The coach's language model is Apple Intelligence on your device. If you choose
+  Private Cloud Compute in Settings instead, the coach's requests go to Apple's Private Cloud Compute,
+  which Apple says keeps no data and makes none accessible, even to Apple. Either way, Euphona does not
+  send your conversation to us.
 - **Speech transcription.** When a lesson asks you to speak freely, the words are transcribed on your
   device with Apple's speech recognition, only to give you feedback on that try.
 - **Settings**, such as your voice goal and theme.
