@@ -7,7 +7,7 @@ ROOT=$(cd "$(dirname "$0")/../.." && pwd)
 export SCREENS=${SCREENS:-"result analysis coach lesson-intro practice progress resonance rules"}
 DEVICES=("iPhone 17 Pro Max" "iPad Pro 13-inch (M5)")
 
-# The device's UDID, creating it on the newest iOS runtime when the machine has the type but no device.
+# The device's UDID, creating it on the newest iOS runtime that supports it when the machine has none.
 device_udid() {
   local name=$1 type runtime
   if ! xcrun simctl list devices available -j | python3 -c "import json, sys
@@ -19,7 +19,9 @@ match = [t['identifier'] for t in types if t['name'] == sys.argv[1]]
 if not match: sys.exit('no device type ' + sys.argv[1] + '; have: ' + ', '.join(t['name'] for t in types))
 print(match[0])" "$name")
     runtime=$(xcrun simctl list runtimes available -j | python3 -c "import json, sys
-print([r['identifier'] for r in json.load(sys.stdin)['runtimes'] if r['platform'] == 'iOS'][-1])")
+runtimes = [r for r in json.load(sys.stdin)['runtimes']
+            if r['platform'] == 'iOS' and any(t['identifier'] == sys.argv[1] for t in r.get('supportedDeviceTypes', []))]
+print(max(runtimes, key=lambda r: [int(p) for p in r['version'].split('.')])['identifier'])" "$type")
     xcrun simctl create "$name" "$type" "$runtime" >/dev/null
   fi
   xcrun simctl list devices available -j | python3 -c "import json, sys
