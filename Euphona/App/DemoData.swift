@@ -45,7 +45,8 @@ enum DemoData {
             added.append(record)
         }
         // Dated in order of score, with steps between the lowest and highest clip, so the demo history
-        // climbs over several weeks the way practice should. The newest analysis is from earlier today.
+        // climbs over several weeks the way practice should. The newest analysis is from this morning, or
+        // from yesterday evening before then.
         let sorted = added.sorted { $0.finalScore < $1.finalScore }
         var climb = sorted
         if let low = sorted.first, let high = sorted.last, sorted.count > 1 {
@@ -53,10 +54,11 @@ enum DemoData {
             for step in steps { context.insert(step) }
             climb = [low] + steps + sorted.dropFirst()
         }
-        let newest = Date.now.addingTimeInterval(-2 * 3600)
+        let morning = calendar.date(bySettingHour: 9, minute: 12, second: 0, of: .now)!
+        let newest = morning < .now ? morning : calendar.date(byAdding: .hour, value: -15, to: morning)!
         for (index, record) in climb.enumerated() {
             let daysAgo = (climb.count - 1 - index) * 3
-            record.date = calendar.date(byAdding: .day, value: -daysAgo, to: newest)!.addingTimeInterval(Double(index % 4) * 2700)
+            record.date = calendar.date(byAdding: .day, value: -daysAgo, to: newest)!.addingTimeInterval(-Double(index % 4) * 2700)
         }
         try? context.save()
         // A short pitch practice on each of the last twelve days, so the streak shows a habit.
@@ -81,11 +83,12 @@ enum DemoData {
     private static let climbSteps = 12
 
     /// A summary-only analysis part of the way (`t`, 0...1) from `low` to `high`, eased so early
-    /// practice gains the most, with a small wobble so the line looks like real practice. It has no
+    /// practice gains the most, with a small wobble so the line looks like real practice, and always
+    /// short of `high`, so the real analysis stays the latest step up. It has no
     /// stored result, so rescoring at launch keeps its numbers.
     private static func step(from low: AnalysisRecord, to high: AnalysisRecord, at t: Double) -> AnalysisRecord? {
         guard let base = low.result else { return nil }
-        let eased = min(1, max(0, 1 - pow(1 - t, 1.6) + sin(t * 23) * 0.035))
+        let eased = min(0.95, max(0, 1 - pow(1 - t, 1.6) + sin(t * 23) * 0.035))
         func mix(_ a: Double, _ b: Double) -> Double { a + (b - a) * eased }
         let record = AnalysisRecord(result: base, audio: nil, audioFormat: nil)
         record.resultJSON = nil

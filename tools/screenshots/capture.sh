@@ -29,19 +29,30 @@ trap 'xcrun simctl status_bar "$UDID" clear; [ "$WAS_BOOTED" = 1 ] || xcrun simc
 xcrun simctl bootstatus "$UDID" -b >/dev/null
 # The status bar Apple uses in its own screenshots, so every shot shows the same clean one.
 xcrun simctl status_bar "$UDID" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 \
-  --cellularMode active --cellularBars 4 --batteryState charged --batteryLevel 100
+  --cellularMode active --cellularBars 4 --batteryState discharging --batteryLevel 100
 xcrun simctl ui "$UDID" appearance "$APPEARANCE"
 xcrun simctl uninstall "$UDID" "$BUNDLE" 2>/dev/null || true
 xcrun simctl install "$UDID" "$APP"
 xcrun simctl privacy "$UDID" grant microphone "$BUNDLE" 2>/dev/null || true
 mkdir -p "$OUT"
+# The system briefly expands the Dynamic Island when a screen starts sound; on iPhone, a shot is taken
+# again a few seconds later while it shows.
+ISLAND=""
+if [[ $DEVICE == iPhone* && $APPEARANCE == light ]]; then
+  ISLAND="$ROOT/.build/island_open"
+  [ -x "$ISLAND" ] || swiftc -O -o "$ISLAND" "$ROOT/tools/screenshots/island_open.swift"
+fi
 
 shot() {
   local name=$1; shift
   xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
   xcrun simctl launch "$UDID" "$BUNDLE" -onboarding 4 -demo_audio "$AUDIO" ${PALETTE_ARGS[@]+"${PALETTE_ARGS[@]}"} "$@" >/dev/null
   sleep "${WAIT:-12}"
-  xcrun simctl io "$UDID" screenshot "$OUT/$name.png" >/dev/null 2>&1
+  for _ in 1 2 3 4 5 6; do
+    xcrun simctl io "$UDID" screenshot "$OUT/$name.png" >/dev/null 2>&1
+    if [ -z "$ISLAND" ] || ! "$ISLAND" "$OUT/$name.png"; then break; fi
+    sleep 4
+  done
   echo "$(date +%T) $OUT/$name.png"
 }
 
