@@ -42,7 +42,7 @@ shot() {
   xcrun simctl launch "$UDID" "$BUNDLE" -onboarding 4 -demo_audio "$AUDIO" ${PALETTE_ARGS[@]+"${PALETTE_ARGS[@]}"} "$@" >/dev/null
   sleep "${WAIT:-12}"
   xcrun simctl io "$UDID" screenshot "$OUT/$name.png" >/dev/null 2>&1
-  echo "$OUT/$name.png"
+  echo "$(date +%T) $OUT/$name.png"
 }
 
 WAIT=25 shot today

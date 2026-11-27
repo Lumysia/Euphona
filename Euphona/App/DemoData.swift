@@ -59,6 +59,12 @@ enum DemoData {
             record.date = calendar.date(byAdding: .day, value: -daysAgo, to: newest)!.addingTimeInterval(Double(index % 4) * 2700)
         }
         try? context.save()
+        // A short pitch practice on each of the last twelve days, so the streak shows a habit.
+        let latestF0 = sorted.last?.speakingF0Hz ?? 200
+        for daysAgo in 0..<12 {
+            let date = calendar.date(byAdding: .day, value: -daysAgo, to: newest)!.addingTimeInterval(-1800)
+            try? store.addPitchSession(meanF0Hz: latestF0 - Double(daysAgo) * 1.5, date: date)
+        }
         // A practice streak of the last two weeks, with a few missed days before it.
         for daysAgo in 0..<40 where daysAgo < 14 || daysAgo % 3 != 1 {
             try? store.recordOpenedDay(calendar.date(byAdding: .day, value: -daysAgo, to: .now)!)

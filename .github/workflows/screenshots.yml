@@ -14,6 +14,10 @@ on:
     branches: [store-screenshots]
     paths: [".github/workflows/screenshots.yml", "tools/screenshots/**", "Euphona/App/DemoData.swift"]
 
+concurrency:
+  group: screenshots-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -101,11 +105,15 @@ jobs:
           if [ "$PLATFORM" = iOS ]; then products=Debug-iphonesimulator; else products=Debug; fi
           mkdir -p ".build/DerivedData/Build/Products/$products"
           tar -C ".build/DerivedData/Build/Products/$products" -xf "$RUNNER_TEMP/app.tar"
-          for language in $LANGUAGES; do
-            if [ "$PLATFORM" = iOS ]; then tools/screenshots/store.sh "$language"; else tools/screenshots/store_mac.sh "$language"; fi
-          done
+          if [ "$PLATFORM" = iOS ]; then
+            # shellcheck disable=SC2086
+            tools/screenshots/store.sh $LANGUAGES
+          else
+            for language in $LANGUAGES; do tools/screenshots/store_mac.sh "$language"; done
+          fi
           find .build/shots -name raw -type d -prune -exec rm -rf {} +
       - uses: actions/upload-artifact@v7
+        if: always()
         with:
           name: shots-${{ matrix.platform }}-${{ strategy.job-index }}
           path: .build/shots
