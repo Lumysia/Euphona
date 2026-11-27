@@ -35,7 +35,8 @@ jobs:
           if [ -z "$LANGUAGES" ]; then
             LANGUAGES="en zh-Hans $(basename -s .json tools/strings/translations/*.json | tr '\n' ' ')"
           fi
-          echo "groups=$(echo "$LANGUAGES" | jq -Rc '[splits(" +") | select(. != "")] | [_nwise(3) | join(" ")]')" >> "$GITHUB_OUTPUT"
+          groups=$(echo "$LANGUAGES" | jq -Rc '[splits(" +") | select(. != "")] | [range(0; length; 3) as $i | .[$i:$i + 3] | join(" ")]')
+          echo "groups=$groups" >> "$GITHUB_OUTPUT"
 
   build:
     name: Build (${{ matrix.platform }})
