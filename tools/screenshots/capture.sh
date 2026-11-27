@@ -14,7 +14,7 @@ OUT="$ROOT/.build/shots/${DEVICE// /-}"
 if [ "$APPEARANCE" = dark ]; then OUT="$OUT-dark"; fi
 PALETTE_ARGS=()
 if [ -n "${PALETTE:-}" ]; then OUT="$OUT-$PALETTE"; PALETTE_ARGS=(-palette "$PALETTE"); fi
-if [ -n "${LANGUAGE:-}" ]; then OUT="$OUT-$LANGUAGE"; PALETTE_ARGS+=(-AppleLanguages "($LANGUAGE)"); fi
+if [ -n "${LANGUAGE:-}" ]; then OUT="$OUT-$LANGUAGE"; PALETTE_ARGS+=(-AppleLanguages "($LANGUAGE)" -AppleLocale "$LANGUAGE"); fi
 BUNDLE=net.lumysia.Euphona
 
 UDID=$(xcrun simctl list devices available -j | python3 -c "import json,sys; d=json.load(sys.stdin)['devices']; print([x['udid'] for r in d for x in d[r] if x['name']=='$DEVICE'][0])")
@@ -25,8 +25,11 @@ else
   WAS_BOOTED=0
   xcrun simctl boot "$UDID"
 fi
-trap '[ "$WAS_BOOTED" = 1 ] || xcrun simctl shutdown "$UDID"' EXIT
+trap 'xcrun simctl status_bar "$UDID" clear; [ "$WAS_BOOTED" = 1 ] || xcrun simctl shutdown "$UDID"' EXIT
 xcrun simctl bootstatus "$UDID" -b >/dev/null
+# The status bar Apple uses in its own screenshots, so every shot shows the same clean one.
+xcrun simctl status_bar "$UDID" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 \
+  --cellularMode active --cellularBars 4 --batteryState charged --batteryLevel 100
 xcrun simctl ui "$UDID" appearance "$APPEARANCE"
 xcrun simctl uninstall "$UDID" "$BUNDLE" 2>/dev/null || true
 xcrun simctl install "$UDID" "$APP"
