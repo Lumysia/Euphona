@@ -13,6 +13,9 @@ The technical choices behind the app, each with its reason. What the app should 
 - **Models run on ONNX Runtime 1.30 on the CPU.** It was 1.8 times faster than ncnn, and older ONNX
   Runtime versions used 4–5.5 GB on a one-minute recording (1.30 stays under 750 MB). Core ML was about
   twice as fast but used 0.9 GB more memory and about 5 s to prepare; to be measured again on iPhones.
+- **ONNX Runtime comes from a byte-identical mirror** (release `deps-onnxruntime-1.30.0` of this
+  repository), because `download.onnxruntime.ai` stopped serving the official archive; the checksum in
+  `Package.swift` is still the official one.
 - **ONNX Runtime's usage telemetry is switched off before the engine starts** (`CEuphonaApple`), so
   "no tracking" is a guarantee rather than an observation.
 - **The release upload removes the embedded copy of `onnxruntime.framework`** (`tools/ci/upload.sh`).

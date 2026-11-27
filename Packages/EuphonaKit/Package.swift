@@ -10,10 +10,10 @@ let package = Package(
         .library(name: "EuphonaKit", targets: ["EuphonaKit"]),
     ],
     targets: [
-        // Official ONNX Runtime Apple build (iOS, iOS Simulator, macOS). See docs/decisions.md.
+        // Official ONNX Runtime Apple build (iOS, iOS Simulator, macOS), from our mirror. See docs/decisions.md.
         .binaryTarget(
             name: "onnxruntime",
-            url: "https://download.onnxruntime.ai/pod-archive-onnxruntime-c-1.30.0.zip",
+            url: "https://github.com/Lumysia/Euphona/releases/download/deps-onnxruntime-1.30.0/pod-archive-onnxruntime-c-1.30.0.zip",
             checksum: "e6f1670c14406fd9f082bb400ab197a9b0a9646058ca6366e440642e2b54a2ea"
         ),
         // A thin C interface to ONNX Runtime's C++ API for the Swift engine.
