@@ -10,9 +10,6 @@ on:
         description: App languages, space-separated (empty for every language the app ships)
         required: false
         default: ""
-  push:
-    branches: [store-screenshots]
-    paths: [".github/workflows/screenshots.yml", "tools/screenshots/**", "Euphona/App/DemoData.swift"]
 
 concurrency:
   group: screenshots-${{ github.ref }}
@@ -34,12 +31,13 @@ jobs:
       - id: groups
         env:
           LANGUAGES: ${{ inputs.languages }}
-        # Seven languages per job: booting the simulators takes longer than a language's shots.
+        # Four languages per job: a job boots each simulator once, since a boot takes longer than a
+        # language's shots, and stays well inside its time limit.
         run: |
           if [ -z "$LANGUAGES" ]; then
             LANGUAGES="en zh-Hans $(basename -s .json tools/strings/translations/*.json | tr '\n' ' ')"
           fi
-          groups=$(echo "$LANGUAGES" | jq -Rc '[splits(" +") | select(. != "")] | [range(0; length; 7) as $i | .[$i:$i + 7] | join(" ")]')
+          groups=$(echo "$LANGUAGES" | jq -Rc '[splits(" +") | select(. != "")] | [range(0; length; 4) as $i | .[$i:$i + 4] | join(" ")]')
           echo "groups=$groups" >> "$GITHUB_OUTPUT"
 
   build:
