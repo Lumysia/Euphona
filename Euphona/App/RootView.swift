@@ -109,6 +109,7 @@ struct RootView: View {
                 await DemoData.seedIfRequested(context: modelContext, engine: engine, settings: settings)
                 DemoData.exportIfRequested(context: modelContext, tint: theme.tint)
                 switch DemoData.screen {
+                case "today": tab = .today
                 case "practice": tab = .practice
                 case "progress": tab = .progress
                 case "coach": tab = .coach

@@ -57,10 +57,10 @@ shot() {
 }
 
 # The first launch seeds the demo history; Today is shot again at the end, when a slow machine has
-# surely finished seeding.
+# surely finished seeding (naming the tab, since a relaunch restores the last one).
 WAIT=25 shot today
 for screen in ${SCREENS:-practice progress coach lesson lesson-intro analysis result rules pitch timbre resonance spectrum piano quality settings history}; do
   shot "$screen" -demo_screen "$screen"
 done
-shot today
+shot today -demo_screen today
 xcrun simctl ui "$UDID" appearance light
