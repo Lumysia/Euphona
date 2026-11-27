@@ -44,6 +44,11 @@ analyses and saves one screenshot per screen under `.build/shots/`. Options: `SC
 captures the Mac windows. Development builds also take `-demo_export <folder>` (writes every image and
 PDF export) and `-demo_message <text>` (sends a Coach chat message).
 
+App Store screenshots come from the **Screenshots** workflow (run it by hand from the Actions tab, for
+every language or the ones given): it builds the debug app and runs `tools/screenshots/store.sh` (6.9-inch
+iPhone and 13-inch iPad) and `tools/screenshots/store_mac.sh` (Mac windows on a 16:10 canvas) with demo
+history, and uploads the shots as artifacts, ready for App Store Connect.
+
 The README's `docs/images/iphone.png` is built from those shots:
 
 ```sh
