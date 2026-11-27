@@ -14,7 +14,18 @@ RAW="$OUT/raw"
 mkdir -p "$RAW"
 # Use the sharpest display mode the machine offers: a HiDPI mode gives 2x captures for the 2880x1800
 # canvas, otherwise the largest mode keeps the window at its full default size.
-if command -v displayplacer >/dev/null || brew install -q jakehilborn/jakehilborn/displayplacer >/dev/null 2>&1; then
+# displayplacer is built from a pinned commit (v1.4.0), not installed from a tap, so the runner never
+# runs code that changed after review.
+DISPLAYPLACER_COMMIT=ca8a7e80d0f536b3331dcf1fe86a9726d5b5556e
+DP_DIR="$ROOT/.build/displayplacer"
+if [ ! -x "$DP_DIR/src/displayplacer" ]; then
+  rm -rf "$DP_DIR"
+  { git clone -q https://github.com/jakehilborn/displayplacer "$DP_DIR" \
+    && git -C "$DP_DIR" checkout -q "$DISPLAYPLACER_COMMIT" \
+    && make -s -C "$DP_DIR/src"; } >/dev/null 2>&1 || true
+fi
+if [ -x "$DP_DIR/src/displayplacer" ]; then
+  displayplacer() { "$DP_DIR/src/displayplacer" "$@"; }
   mode=$(displayplacer list | python3 -c "import re, sys
 text = sys.stdin.read()
 screen = re.search(r'Persistent screen id: (\S+)', text).group(1)
