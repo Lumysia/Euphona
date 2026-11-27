@@ -54,9 +54,10 @@ jobs:
             signing: CODE_SIGN_IDENTITY=- CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM= CODE_SIGN_ENTITLEMENTS= ENABLE_APP_SANDBOX=NO
     steps:
       - uses: actions/checkout@v7
+      # The same cache as CI, so the ONNX Runtime download is shared.
       - uses: actions/cache@v6
         with:
-          path: .build/DerivedData/SourcePackages/artifacts
+          path: build/SourcePackages/artifacts
           key: xcode-artifacts-${{ hashFiles('Packages/EuphonaKit/Package.swift') }}
       - name: Build
         env:
@@ -66,9 +67,9 @@ jobs:
           set -o pipefail
           # shellcheck disable=SC2086
           xcodebuild build -project Euphona.xcodeproj -scheme Euphona -configuration Debug \
-            -destination "$DESTINATION" -derivedDataPath .build/DerivedData $SIGNING \
+            -destination "$DESTINATION" -derivedDataPath build $SIGNING \
             | xcbeautify --renderer github-actions
-          tar -C ".build/DerivedData/Build/Products/${{ matrix.products }}" -cf "$RUNNER_TEMP/app.tar" Euphona.app
+          tar -C "build/Build/Products/${{ matrix.products }}" -cf "$RUNNER_TEMP/app.tar" Euphona.app
       - uses: actions/upload-artifact@v7
         with:
           name: app-${{ matrix.platform }}
