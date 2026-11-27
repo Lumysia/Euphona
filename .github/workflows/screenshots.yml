@@ -33,13 +33,13 @@ jobs:
       - uses: actions/checkout@v7
       - id: groups
         env:
-          LANGUAGES: ${{ github.event_name == 'push' && 'en zh-Hans ja' || inputs.languages }}
-        # Three languages per job keeps each job short and the number of macOS jobs low.
+          LANGUAGES: ${{ inputs.languages }}
+        # Seven languages per job: booting the simulators takes longer than a language's shots.
         run: |
           if [ -z "$LANGUAGES" ]; then
             LANGUAGES="en zh-Hans $(basename -s .json tools/strings/translations/*.json | tr '\n' ' ')"
           fi
-          groups=$(echo "$LANGUAGES" | jq -Rc '[splits(" +") | select(. != "")] | [range(0; length; 3) as $i | .[$i:$i + 3] | join(" ")]')
+          groups=$(echo "$LANGUAGES" | jq -Rc '[splits(" +") | select(. != "")] | [range(0; length; 7) as $i | .[$i:$i + 7] | join(" ")]')
           echo "groups=$groups" >> "$GITHUB_OUTPUT"
 
   build:
@@ -85,7 +85,7 @@ jobs:
     name: Shots (${{ matrix.platform }}, ${{ matrix.languages }})
     needs: [plan, build]
     runs-on: xcode-27
-    timeout-minutes: 60
+    timeout-minutes: 100
     strategy:
       fail-fast: false
       matrix:
