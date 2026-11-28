@@ -58,7 +58,16 @@ struct AnalysisView: View {
         .onDisappear { Task { await session.cancel() } }
         .onChange(of: stateKey) {
             if case .finished(let outcome) = session.state { onFinish(outcome) }
+            #if DEBUG
+            if case .finished = session.state { DemoTour.shared.analysisFinished = true }
+            #endif
         }
+        #if DEBUG
+        .onChange(of: DemoTour.shared.step) { _, step in
+            guard step == .importAudio, let file = DemoFile.url(for: "demo_import") else { return }
+            Task { await session.analyze(file: file, .init(engine: engine, settings: settings, context: modelContext, errors: errors)) }
+        }
+        #endif
         .errorAlerts(errors)
     }
 

@@ -57,6 +57,17 @@ swift tools/screenshots/overview.swift docs/images/iphone.png 6 360 \
   $S/{today,analysis,result,rules,progress,coach,lesson,lesson-intro,practice,resonance,piano,settings}.png
 ```
 
+## App Review videos
+
+App Review can ask for a screen recording. A development build makes one by itself: launch it with
+`-demo_tour 1 -demo_record <name> -demo_import <speech file> -demo_input <speech file>` (a relative file
+name is read from the app bundle, or from Documents for `-demo_record`). The scripted tour walks Today, an
+analysis, the live pitch tool, Coach and Progress in about a minute, with the speech file in place of the
+microphone, and the app records only its own windows. Seed demo history first (`-demo_audio <folder>`) and
+use a separate bundle ID so a real history stays out of the video. On iPhone and iPad, tap the start card
+and choose Record Screen when iOS asks; stay in the app until it says Done. Why it works this way:
+`docs/decisions.md`. Release builds contain none of this.
+
 ## Text and translations
 
 All text is in `tools/strings/strings.json` (English and Simplified Chinese) and

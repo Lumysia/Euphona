@@ -63,6 +63,9 @@ struct RootView: View {
     #if os(macOS)
     @Environment(\.openWindow) private var openWindow
     @Environment(\.openSettings) private var openSettings
+    #if DEBUG
+    @Environment(\.dismissWindow) private var dismissWindow
+    #endif
     #endif
     @Namespace private var zoom
     @State private var orbScale: CGFloat = 1
@@ -72,6 +75,9 @@ struct RootView: View {
 
     var body: some View {
         content
+            #if DEBUG && os(iOS)
+            .overlay { DemoTourCard().ignoresSafeArea() }
+            #endif
             .onGeometryChange(for: CGFloat.self) { OrbScale.forWindow($0.size) } action: { orbScale = $0 }
             .environment(\.orbScale, orbScale)
     }
@@ -118,6 +124,13 @@ struct RootView: View {
                 case let name?: demoScreen = DemoScreen(name: name)
                 default: break
                 }
+                DemoTour.shared.start(.init(selectTab: { tab = $0 }, startAnalysis: startAnalysis, closeAnalysis: {
+                    #if os(macOS)
+                    dismissWindow(id: AnalysisView.windowID)
+                    #else
+                    analyzing = false
+                    #endif
+                }, context: modelContext))
                 #endif
             }
             // Its own task: it can take a minute and must not hold up the rest of launch.
