@@ -252,6 +252,12 @@ The technical choices behind the app, each with its reason. What the app should 
   or dark mode. On Mac, `tools/screenshots/capture_mac.sh` captures each window without seeding demo
   data, because the Mac store is the person's real, iCloud-synced history. The demo history fills the
   steps between the two sample clips with summary-only records, so trends climb over several weeks.
+- **App Review recordings come from a scripted tour in debug builds** (`-demo_tour 1` with
+  `-demo_import <file>`, `-demo_input <file>`, `-demo_record <file>`): it walks Today, an imported
+  analysis, the live pitch tool, Coach and Progress, with a speech file in place of the microphone, and
+  the app records only itself (ScreenCaptureKit on Mac, which needs no Screen Recording permission for a
+  process's own windows; ReplayKit on iPhone and iPad), so nothing else on the device can appear. Run it
+  under another bundle ID so the person's own history stays out.
 - **App Store screenshots are made in CI** (Screenshots workflow): a runner Mac has no history, so
   `store_mac.sh` may seed demo data there; the status bar is Apple's 9:41, and an iPhone shot is retaken
   while the system's audio indicator has the Dynamic Island open.

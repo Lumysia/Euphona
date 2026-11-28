@@ -8,7 +8,7 @@ import UniformTypeIdentifiers
 /// Screenshot data for development builds: launch with `-demo_audio <folder of WAVs>` and each file
 /// is analyzed by the engine and saved as a record on a past day. Pass `-demo_screen <name>` to open a screen.
 enum DemoData {
-    static var audioFolder: URL? { UserDefaults.standard.string(forKey: "demo_audio").map { URL(filePath: $0) } }
+    static var audioFolder: URL? { DemoTour.file("demo_audio") }
     static var screen: String? { UserDefaults.standard.string(forKey: "demo_screen") }
     /// A message the coach conversation sends once when it opens (`-demo_message <text>`).
     static var message: String? { UserDefaults.standard.string(forKey: "demo_message") }

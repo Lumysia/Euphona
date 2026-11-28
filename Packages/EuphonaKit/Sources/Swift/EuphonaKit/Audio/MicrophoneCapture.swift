@@ -14,15 +14,27 @@ public final class MicrophoneCapture: @unchecked Sendable {
     private let engine = AVAudioEngine()
     private let lock = NSLock()
     private var running = false
+    #if DEBUG
+    private var demoFeed: Task<Void, Never>?
+    #endif
 
     public init() {}
 
     public static func requestPermission() async -> Bool {
-        await AVAudioApplication.requestRecordPermission()
+        #if DEBUG
+        if demoInput != nil { return true }
+        #endif
+        return await AVAudioApplication.requestRecordPermission()
     }
 
     /// Starts capturing. `onSamples` runs on the audio thread with each converted chunk.
     public func start(mode: Mode, onSamples: @escaping @Sendable ([Float]) -> Void) throws {
+        #if DEBUG
+        if let file = Self.demoInput {
+            startDemo(file, onSamples: onSamples)
+            return
+        }
+        #endif
         guard AVAudioApplication.shared.recordPermission == .granted else { throw Failure.permissionDenied }
         #if os(iOS)
         let session = AVAudioSession.sharedInstance()
@@ -64,6 +76,13 @@ public final class MicrophoneCapture: @unchecked Sendable {
             return running
         }
         guard wasRunning else { return }
+        #if DEBUG
+        if let demoFeed {
+            demoFeed.cancel()
+            self.demoFeed = nil
+            return
+        }
+        #endif
         engine.inputNode.removeTap(onBus: 0)
         engine.stop()
         #if os(iOS)
@@ -73,3 +92,39 @@ public final class MicrophoneCapture: @unchecked Sendable {
 
     deinit { stop() }
 }
+
+#if DEBUG
+extension MicrophoneCapture {
+    /// A speech file heard in place of the microphone (`-demo_input <file>`), in real time and looped, for
+    /// demo recordings that need neither a live voice nor microphone access. A relative path is looked up
+    /// in the app bundle.
+    public static var demoInput: URL? {
+        UserDefaults.standard.string(forKey: "demo_input").map { path in
+            path.hasPrefix("/") ? URL(filePath: path) : Bundle.main.bundleURL.appending(path: path)
+        }
+    }
+
+    private func startDemo(_ file: URL, onSamples: @escaping @Sendable ([Float]) -> Void) {
+        lock.withLock { running = true }
+        demoFeed = Task.detached(priority: .userInitiated) {
+            guard let audio = try? await AudioFileReader.read(file), !audio.samples.isEmpty else { return }
+            let step = Double(audio.sampleRate) / Double(Self.sampleRate)
+            let samples = stride(from: 0.0, to: Double(audio.samples.count - 1), by: step).map { position in
+                let index = Int(position), fraction = Float(position - Double(index))
+                return audio.samples[index] * (1 - fraction) + audio.samples[index + 1] * fraction
+            }
+            let chunk = 1024
+            let clock = ContinuousClock()
+            var next = clock.now
+            var offset = 0
+            while !Task.isCancelled {
+                let end = min(offset + chunk, samples.count)
+                onSamples(Array(samples[offset..<end]))
+                next += .seconds(Double(end - offset) / Double(Self.sampleRate))
+                offset = end == samples.count ? 0 : end
+                try? await Task.sleep(until: next, clock: clock)
+            }
+        }
+    }
+}
+#endif

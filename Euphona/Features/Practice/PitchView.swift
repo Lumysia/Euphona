@@ -56,6 +56,11 @@ struct PitchView: View {
         }
         .animation(.spring(response: 0.4, dampingFraction: 0.75), value: monitor.state)
         .onDisappear { monitor.finish(context: modelContext) }
+        #if DEBUG
+        .onChange(of: DemoTour.shared.step) { _, step in
+            if step == .startTool, !isLive { toggle() }
+        }
+        #endif
         .sensoryFeedback(.selection, trigger: monitor.replay.reachedLastPage) { !$0 && $1 }
         .accessibilityLabel(monitor.currentHz.map { Text(.pitchAccessibilityCurrent(Float($0))) } ?? Text(.pitchAccessibilityWaiting))
     }

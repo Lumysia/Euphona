@@ -3,8 +3,9 @@ import SwiftUI
 /// Practice tools: live pitch, timbre and resonance, spectrum, piano and Voice Quality.
 struct PracticeView: View {
     @Environment(\.theme) private var theme
+    @State private var path: [Route] = []
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 300), spacing: 16)], spacing: 16) {
                     ToolCard(title: .pitchTitle, subtitle: .pitchReferenceSubtitle, symbol: "waveform.path",
@@ -29,6 +30,12 @@ struct PracticeView: View {
             .appRoutes()
             .toolbar { RootToolbar() }
         }
+        #if DEBUG
+        .onChange(of: DemoTour.shared.step) { _, step in
+            if step == .openTool { path = [.practice(.pitch)] }
+            if step == .closeTool { path = [] }
+        }
+        #endif
     }
 }
 
