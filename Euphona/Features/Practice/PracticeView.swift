@@ -33,7 +33,7 @@ struct PracticeView: View {
         #if DEBUG
         .onChange(of: DemoTour.shared.step) { _, step in
             if step == .openTool { path = [.practice(.pitch)] }
-            if step == .closeTool { path = [] }
+            if step == .closeTool || step == .idle { path = [] }
         }
         #endif
     }

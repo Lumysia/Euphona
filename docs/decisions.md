@@ -256,8 +256,12 @@ The technical choices behind the app, each with its reason. What the app should 
   `-demo_import <file>`, `-demo_input <file>`, `-demo_record <file>`): it walks Today, an imported
   analysis, the live pitch tool, Coach and Progress, with a speech file in place of the microphone, and
   the app records only itself (ScreenCaptureKit on Mac, which needs no Screen Recording permission for a
-  process's own windows; ReplayKit on iPhone and iPad), so nothing else on the device can appear. Run it
-  under another bundle ID so the person's own history stays out.
+  process's own windows; ReplayKit capture on iPhone and iPad), so nothing else on the device can appear.
+  Run it under another bundle ID so the person's own history stays out. On iPhone and iPad the person
+  holding the device starts each take from a full-screen card, since iOS asks for consent and stops
+  capture whenever the app leaves the foreground: the take is written in one-second movie fragments, so
+  leaving keeps what was recorded and the card returns for a new take, and every step and ReplayKit error
+  goes to `Documents/review-log.txt`.
 - **App Store screenshots are made in CI** (Screenshots workflow): a runner Mac has no history, so
   `store_mac.sh` may seed demo data there; the status bar is Apple's 9:41, and an iPhone shot is retaken
   while the system's audio indicator has the Dynamic Island open.
