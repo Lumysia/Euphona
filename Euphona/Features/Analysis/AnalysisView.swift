@@ -64,7 +64,7 @@ struct AnalysisView: View {
         }
         #if DEBUG
         .onChange(of: DemoTour.shared.step) { _, step in
-            guard step == .importAudio, let file = DemoTour.file("demo_import") else { return }
+            guard step == .importAudio, let file = DemoFile.url(for: "demo_import") else { return }
             Task { await session.analyze(file: file, .init(engine: engine, settings: settings, context: modelContext, errors: errors)) }
         }
         #endif

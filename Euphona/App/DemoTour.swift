@@ -15,15 +15,16 @@ import UIKit
 /// On Mac the tour starts at launch and the app quits when it ends. On iPhone and iPad the person holding
 /// the device starts it from a full-screen card (`DemoTourCard`), so iOS's recording consent comes only
 /// after their tap; leaving the app for the background ends the take, keeping what was recorded, and the
-/// card comes back for a new one. A take is written under its own name and becomes the `-demo_record` file only once the tour
-/// ran to the end. Records the tour makes are dated after `-demo_tour_since <ISO 8601 date>` (default: this
-/// launch) and are removed before each take, so the history on screen is the demo history plus one take.
+/// card comes back for a new one. A take is written under its own name and becomes the `-demo_record`
+/// file only once the tour ran to the end. Records the tour makes are dated after
+/// `-demo_tour_since <ISO 8601 date>` (default: this launch) and are removed before each take, so the
+/// history on screen is the demo history plus one take.
 @MainActor @Observable
 final class DemoTour {
     static let shared = DemoTour()
     static var isOn: Bool { UserDefaults.standard.bool(forKey: "demo_tour") }
 
-    enum Step { case idle, importAudio, openTool, startTool, closeTool, done }
+    enum Step { case idle, importAudio, openTool, startTool, closeTool }
     enum Phase { case off, ready, starting, recording, closing, finished }
     /// Why the card is back, shown on it.
     enum Setback { case leftApp, notStarted }
@@ -48,13 +49,6 @@ final class DemoTour {
     private var observers: [NSObjectProtocol] = []
     private let since: Date = UserDefaults.standard.string(forKey: "demo_tour_since")
         .flatMap { try? Date($0, strategy: .iso8601) } ?? .now
-
-    /// A launch argument's file; a relative path is looked up in the app bundle.
-    static func file(_ key: String) -> URL? {
-        UserDefaults.standard.string(forKey: key).map { path in
-            path.hasPrefix("/") ? URL(filePath: path) : Bundle.main.bundleURL.appending(path: path)
-        }
-    }
 
     /// Called once the app's first screen is up.
     func start(_ actions: Actions) {
@@ -157,7 +151,6 @@ final class DemoTour {
         actions.selectTab(.progress)
         DemoLog.write("progress")
         try await pause(8)
-        step = .done
     }
 
     private func pause(_ seconds: Double) async throws {
@@ -265,60 +258,4 @@ final class DemoTour {
     }
     #endif
 }
-
-#if os(iOS)
-/// What the person holding the device sees before and after a take, in English and Chinese, since they
-/// start it themselves and nothing outside the app explains it. Debug only, so not localized.
-struct DemoTourCard: View {
-    private let tour = DemoTour.shared
-
-    var body: some View {
-        switch tour.phase {
-        case .ready:
-            Button(action: tour.begin) {
-                card(symbol: "record.circle", tint: .red, lines: [
-                    "Tap to start the review recording.",
-                    "Then put the phone down for about 3 minutes.",
-                    "点一下开始录制审核视频，然后把手机放下大约 3 分钟。",
-                ], note: note)
-            }
-            .buttonStyle(.plain)
-        case .finished:
-            card(symbol: "checkmark.circle.fill", tint: .green, lines: [
-                "Done, you can take the phone back.",
-                "录好了，可以把手机拿回去了。",
-            ], note: nil)
-        case .off, .starting, .recording, .closing:
-            EmptyView()
-        }
-    }
-
-    private var note: String {
-        switch tour.setback {
-        case .leftApp: "The last take stopped when the app was left. Stay in Euphona until it says Done.\n上一次离开 Euphona 时停了，录完之前请留在 Euphona 里。"
-        case .notStarted: "Recording didn't start. When iOS asks, choose Record Screen.\n录制没有开始。系统询问时请选“录制屏幕”。"
-        case nil: "When iOS asks, choose Record Screen.\n系统询问时请选“录制屏幕”。"
-        }
-    }
-
-    private func card(symbol: String, tint: Color, lines: [String], note: String?) -> some View {
-        VStack(spacing: 20) {
-            Image(systemName: symbol)
-                .font(.system(size: 72))
-                .foregroundStyle(tint)
-            ForEach(lines, id: \.self) { line in
-                Text(verbatim: line).font(.title2.weight(.semibold))
-            }
-            if let note {
-                Text(verbatim: note).font(.body).foregroundStyle(.secondary).padding(.top, 12)
-            }
-        }
-        .multilineTextAlignment(.center)
-        .padding(32)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.background)
-        .contentShape(Rectangle())
-    }
-}
-#endif
 #endif

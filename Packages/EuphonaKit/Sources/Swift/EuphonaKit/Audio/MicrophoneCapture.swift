@@ -96,13 +96,8 @@ public final class MicrophoneCapture: @unchecked Sendable {
 #if DEBUG
 extension MicrophoneCapture {
     /// A speech file heard in place of the microphone (`-demo_input <file>`), in real time and looped, for
-    /// demo recordings that need neither a live voice nor microphone access. A relative path is looked up
-    /// in the app bundle.
-    public static var demoInput: URL? {
-        UserDefaults.standard.string(forKey: "demo_input").map { path in
-            path.hasPrefix("/") ? URL(filePath: path) : Bundle.main.bundleURL.appending(path: path)
-        }
-    }
+    /// demo recordings that need neither a live voice nor microphone access.
+    public static var demoInput: URL? { DemoFile.url(for: "demo_input") }
 
     private func startDemo(_ file: URL, onSamples: @escaping @Sendable ([Float]) -> Void) {
         lock.withLock { running = true }
